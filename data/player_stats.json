@@ -1,0 +1,452 @@
+[
+    {
+        "ID":"david_alaba",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":0.0,
+        "Matches":7,
+        "Minutes Played":317,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"arda_guler",
+        "Position":"midfielder",
+        "Goals":3.0,
+        "Assists":4.0,
+        "Matches":28,
+        "Minutes Played":1247,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"jude_bellingham",
+        "Position":"midfielder",
+        "Goals":9.0,
+        "Assists":8.0,
+        "Matches":31,
+        "Minutes Played":2494,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"brahim_diaz",
+        "Position":"forward",
+        "Goals":4.0,
+        "Assists":2.0,
+        "Matches":31,
+        "Minutes Played":1380,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"camavinga",
+        "Position":"midfielder",
+        "Goals":1.0,
+        "Assists":2.0,
+        "Matches":19,
+        "Minutes Played":1102,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"dani_carvajal",
+        "Position":"defender",
+        "Goals":1.0,
+        "Assists":0.0,
+        "Matches":8,
+        "Minutes Played":609,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"courtois",
+        "Position":"goalkeeper",
+        "Goals":null,
+        "Assists":null,
+        "Matches":30,
+        "Minutes Played":2700,
+        "Clean Sheets":11.0,
+        "Penalties Saved":0.0
+    },
+    {
+        "ID":"dani_ceballos",
+        "Position":"midfielder",
+        "Goals":0.0,
+        "Assists":0.0,
+        "Matches":23,
+        "Minutes Played":1218,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"eder_militao",
+        "Position":"defender",
+        "Goals":1.0,
+        "Assists":1.0,
+        "Matches":12,
+        "Minutes Played":940,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"endrick",
+        "Position":"forward",
+        "Goals":1.0,
+        "Assists":0.0,
+        "Matches":22,
+        "Minutes Played":353,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"fran_garcia",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":2.0,
+        "Matches":31,
+        "Minutes Played":2174,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"lucas_vazquez",
+        "Position":"midfielder",
+        "Goals":1.0,
+        "Assists":5.0,
+        "Matches":32,
+        "Minutes Played":2193,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"andriy_lunin",
+        "Position":"goalkeeper",
+        "Goals":null,
+        "Assists":null,
+        "Matches":7,
+        "Minutes Played":630,
+        "Clean Sheets":4.0,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"kylian_mbappe",
+        "Position":"forward",
+        "Goals":31.0,
+        "Assists":3.0,
+        "Matches":34,
+        "Minutes Played":2915,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"mendy",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":1.0,
+        "Matches":14,
+        "Minutes Played":1006,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"luka_modric",
+        "Position":"midfielder",
+        "Goals":2.0,
+        "Assists":6.0,
+        "Matches":35,
+        "Minutes Played":1819,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"rodrygo",
+        "Position":"forward",
+        "Goals":6.0,
+        "Assists":5.0,
+        "Matches":30,
+        "Minutes Played":1937,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"rudiger",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":0.0,
+        "Matches":26,
+        "Minutes Played":2291,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"tchouameni",
+        "Position":"midfielder",
+        "Goals":0.0,
+        "Assists":0.0,
+        "Matches":32,
+        "Minutes Played":2692,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"vallejo",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":1.0,
+        "Matches":4,
+        "Minutes Played":136,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"valverde",
+        "Position":"midfielder",
+        "Goals":6.0,
+        "Assists":4.0,
+        "Matches":36,
+        "Minutes Played":3032,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"vinicius_junior",
+        "Position":"forward",
+        "Goals":11.0,
+        "Assists":8.0,
+        "Matches":30,
+        "Minutes Played":2257,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"ter_stegen",
+        "Position":"goalkeeper",
+        "Goals":null,
+        "Assists":null,
+        "Matches":8,
+        "Minutes Played":675,
+        "Clean Sheets":1.0,
+        "Penalties Saved":0.0
+    },
+    {
+        "ID":"pena",
+        "Position":"goalkeeper",
+        "Goals":null,
+        "Assists":null,
+        "Matches":16,
+        "Minutes Played":1395,
+        "Clean Sheets":4.0,
+        "Penalties Saved":0.0
+    },
+    {
+        "ID":"szczesny",
+        "Position":"goalkeeper",
+        "Goals":null,
+        "Assists":null,
+        "Matches":15,
+        "Minutes Played":1350,
+        "Clean Sheets":8.0,
+        "Penalties Saved":0.0
+    },
+    {
+        "ID":"cubarsi",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":3.0,
+        "Matches":35,
+        "Minutes Played":2620,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"alejandro_balde",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":4.0,
+        "Matches":32,
+        "Minutes Played":2292,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"ronald_araujo",
+        "Position":"defender",
+        "Goals":1.0,
+        "Assists":1.0,
+        "Matches":12,
+        "Minutes Played":757,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"inigo_martinez",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":4.0,
+        "Matches":28,
+        "Minutes Played":2493,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"christensen",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":0.0,
+        "Matches":5,
+        "Minutes Played":252,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"jules_kounde",
+        "Position":"defender",
+        "Goals":2.0,
+        "Assists":3.0,
+        "Matches":32,
+        "Minutes Played":2606,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"garcia",
+        "Position":"defender",
+        "Goals":0.0,
+        "Assists":1.0,
+        "Matches":3,
+        "Minutes Played":53,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"gavi",
+        "Position":"midfielder",
+        "Goals":1.0,
+        "Assists":1.0,
+        "Matches":26,
+        "Minutes Played":1083,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"pedri",
+        "Position":"midfielder",
+        "Goals":4.0,
+        "Assists":5.0,
+        "Matches":37,
+        "Minutes Played":2892,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"pablo_torre",
+        "Position":"midfielder",
+        "Goals":3.0,
+        "Assists":1.0,
+        "Matches":10,
+        "Minutes Played":308,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"lopez",
+        "Position":"midfielder",
+        "Goals":6.0,
+        "Assists":5.0,
+        "Matches":28,
+        "Minutes Played":1245,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"casado",
+        "Position":"midfielder",
+        "Goals":1.0,
+        "Assists":3.0,
+        "Matches":23,
+        "Minutes Played":1616,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"olmo",
+        "Position":"midfielder",
+        "Goals":10.0,
+        "Assists":3.0,
+        "Matches":25,
+        "Minutes Played":1216,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"frenkie_de_jong",
+        "Position":"midfielder",
+        "Goals":2.0,
+        "Assists":2.0,
+        "Matches":26,
+        "Minutes Played":1136,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"ferran_torres",
+        "Position":"midfielder",
+        "Goals":10.0,
+        "Assists":6.0,
+        "Matches":27,
+        "Minutes Played":1100,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"lewandowski",
+        "Position":"forward",
+        "Goals":27.0,
+        "Assists":2.0,
+        "Matches":34,
+        "Minutes Played":2681,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"ansu_fati",
+        "Position":"forward",
+        "Goals":0.0,
+        "Assists":0.0,
+        "Matches":6,
+        "Minutes Played":232,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"raphinha",
+        "Position":"forward",
+        "Goals":18.0,
+        "Assists":9.0,
+        "Matches":36,
+        "Minutes Played":2844,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"pau_victor",
+        "Position":"forward",
+        "Goals":1.0,
+        "Assists":0.0,
+        "Matches":1,
+        "Minutes Played":55,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    },
+    {
+        "ID":"lamine_yamal",
+        "Position":"forward",
+        "Goals":9.0,
+        "Assists":13.0,
+        "Matches":35,
+        "Minutes Played":2861,
+        "Clean Sheets":null,
+        "Penalties Saved":null
+    }
+]

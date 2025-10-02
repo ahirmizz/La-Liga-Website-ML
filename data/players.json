@@ -1,0 +1,369 @@
+{
+"teams": [
+    {
+
+        "team": "Real Madrid",
+        "players": [
+            {
+                "id": "david_alaba",
+                "name": "David Alaba",
+                "position": "Defender",
+                "number": 4,
+                "nation": "nations/Austria.svg",
+                "img": "RMA_images/Alaba.webp",
+                "backImg": "RMA_images/AlabaBack.jpg"
+            },
+            {
+                "name": "Arda Güler",
+                "position": "Midfielder",
+                "number": 15,
+                "nation": "nations/Turkey.svg",
+                "img": "RMA_images/Arda_Güler.webp",
+                "backImg": "RMA_images/GulerBack.jpg"
+            },
+            {
+                "name": "Jude Bellingham",
+                "position": "Midfielder",
+                "number": 5,
+                "nation": "nations/England.png",
+                "img": "RMA_images/Bellingham.webp",
+                "backImg": "RMA_images/BellinghamBack.jpg"
+            },
+            {
+                "name": "Brahim Díaz",
+                "position": "Forward",
+            "number": 21,
+            "nation": "nations/Spain.png",
+            "img": "RMA_images/Brahim.webp",
+            "backImg": "RMA_images/BrahimBack.jpg"
+        },
+        {
+            "name": "Camavinga",
+            "position": "Midfielder",
+            "number": 6,
+            "nation": "nations/France.webp",
+            "img": "RMA_images/Camavinga.webp",
+            "backImg": "RMA_images/CamavingaBack.jpg"
+        },
+        {
+            "name": "Dani Carvajal",
+            "position": "Defender",
+            "number": 2,
+            "nation": "nations/Spain.png",
+            "img": "RMA_images/Carvajal.webp",
+            "backImg": "RMA_images/CarvajalBack.jpg"
+        },
+        {
+            "name": "Dani Ceballos",
+            "position": "Midfielder",
+            "number": 19,
+            "nation": "nations/Spain.png",
+            "img": "RMA_images/Ceballos.webp",
+            "backImg": "RMA_images/CeballosBack.jpg"
+        },
+        {
+            "name": "Courtois",
+            "position": "Goalkeeper",
+            "number": 1,
+            "nation": "nations/Belgium.svg",
+            "img": "RMA_images/Courtois.webp",
+            "backImg": "RMA_images/CourtoisBack.jpg"
+        },
+        {
+            "name": "Éder Militão",
+            "position": "Defender",
+            "number": 3,
+            "nation": "nations/Brazil.png",
+            "img": "RMA_images/Militão.webp",
+            "backImg": "RMA_images/MilitaoBack.jpg"
+        },
+        {
+            "name": "Endrick",
+            "position": "Forward",
+            "number": 16,
+            "nation": "nations/Brazil.png",
+            "img": "RMA_images/Endrick.webp",
+            "backImg": "RMA_images/EndrickBack.jpeg"
+        },
+        {
+            "name": "Fran García",
+            "position": "Defender",
+            "number": 20,
+            "nation": "nations/Spain.png",
+            "img": "RMA_images/García.webp",
+            "backImg": "RMA_images/GarciaBack.jpg"
+        },
+        {
+            "name": "Lucas Vázquez",
+            "position": "Midfielder",
+            "number": 17,
+            "nation": "nations/Spain.png",
+            "img": "RMA_images/Vázquez.webp",
+            "backImg": "RMA_images/VazquezBack.jpg"
+        },
+        {
+            "name": "Andriy Lunin",
+            "position": "Goalkeeper",
+            "number": 13,
+            "nation": "nations/Ukraine.png",
+            "img": "RMA_images/Lunin.webp",
+            "backImg": "RMA_images/LuninBack.jpg"
+        },
+        {
+            "name": "Kylian Mbappé",
+            "position": "Forward",
+            "number": 9,
+            "nation": "nations/France.webp",
+            "img": "RMA_images/Mbappé.webp",
+            "backImg": "RMA_images/MbappeBack.jpg"
+        },
+        {
+            "name": "Mendy",
+            "position": "Defender",
+            "number": 23,
+            "nation": "nations/France.webp",
+            "img": "RMA_images/Mendy.webp",
+            "backImg": "RMA_images/MendyBack.jpg"
+        },
+        {
+            "name": "Luka Modrić",
+            "position": "Midfielder",
+            "number": 10,
+            "nation": "nations/Croatia.png",
+            "img": "RMA_images/Modrić.webp",
+            "backImg": "RMA_images/ModricBack.jpg"
+        },
+        {
+            "name": "Rodrygo",
+            "position": "Forward",
+            "number": 11,
+            "nation": "nations/Brazil.png",
+            "img": "RMA_images/Rodrygo.webp",
+            "backImg": "RMA_images/RodrygoBack.png"
+        },
+        {
+            "name": "Rüdiger",
+            "position": "Defender",
+            "number": 22,
+            "nation": "nations/Germany.webp",
+            "img": "RMA_images/Rüdiger.webp",
+            "backImg": "RMA_images/RudigerBack.jpg"
+        },
+        {
+            "name": "Tchouaméni",
+            "position": "Midfielder",
+            "number": 14,
+            "nation": "nations/France.webp",
+            "img": "RMA_images/Tchouaméni.webp",
+            "backImg": "RMA_images/TchouameniBack.jpg"
+        },
+        {
+            "name": "Vallejo",
+            "position": "Defender",
+            "number": 18,
+            "nation": "nations/Spain.png",
+            "img": "RMA_images/Vallejo.webp",
+            "backImg": "RMA_images/VallejoBack.png"
+        },
+        {
+            "name": "Valverde",
+            "position": "Midfielder",
+            "number": 8,
+            "nation": "nations/Uruguay.webp",
+            "img": "RMA_images/Valverde.webp",
+            "backImg": "RMA_images/ValverdeBack.jpg"
+        },
+        {
+            "name": "Vinicius Júnior",
+            "position": "Forward",
+            "number": 7,
+            "nation": "nations/Brazil.png",
+            "img": "RMA_images/Vini_Jr.webp",
+            "backImg": "RMA_images/JuniorBack.jpg"
+        }
+    ]
+},
+{
+    "team": "Barcelona",
+    "players": [
+            {
+                "name": "Ter Stegen",
+                "position": "Goalkeeper",
+                "number": 1,
+                "nation": "nations/Germany.webp",
+                "img": "Barca_images/TerStegen.webp",
+                "backImg": "Barca_images/TerStegenBack.jpg"
+            },
+            {
+                "name": "Peña",
+                "position": "Goalkeeper",
+                "number": 13,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Pena.webp",
+                "backImg": "Barca_images/PenaBack.jpg"
+
+            },
+            {
+                "name": "Szczęsny",
+                "position": "Goalkeeper",
+                "number": 25,
+                "nation": "nations/Poland.png",
+                "img": "Barca_images/Szczesny.webp"
+            },
+            {
+                "name": "Cubarsí",
+                "position": "Defender",
+                "number": 2,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Cubarsi.webp",
+                "backImg": "Barca_images/CubarsiBack.jpg"
+            },
+            {
+                "name": "Alejandro Balde",
+                "position": "Defender",
+                "number": 3,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Balde.webp",
+                "backImg": "Barca_images/BaldeBack.jpg"
+            },
+            {
+                "name": "Ronald Araujo",
+                "position": "Defender",
+                "number": 4,
+                "nation": "nations/Uruguay.webp",
+                "img": "Barca_images/Araujo.webp",
+                "backImg": "Barca_images/AraujoBack.jpg"
+            },
+            {
+                "name": "Iñigo Martinez",
+                "position": "Defender",
+                "number": 5,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Martinez.webp",
+                "backImg": "Barca_images/MartinezBack.jpg"
+            },
+            {
+                "name": "Christensen",
+                "position": "Defender",
+                "number": 15,
+                "nation": "nations/Denmark.png",
+                "img": "Barca_images/Christensen.webp",
+                "backImg": "Barca_images/ChristensenBack.jpg"
+            },
+            {
+                "name": "Jules Kounde",
+                "position": "Defender",
+                "number": 23,
+                "nation": "nations/France.webp",
+                "img": "Barca_images/Kounde.webp",
+                "backImg": "Barca_images/KoundeBack.jpg"
+            },
+            {
+                "name": "Garcia",
+                "position": "Defender",
+                "number": 24,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Garcia.webp"
+            },
+            {
+                "name": "Gavi",
+                "position": "Midfielder",
+                "number": 6,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Gavi.webp"
+            },
+            {
+                "name": "Pedri",
+                "position": "Midfielder",
+                "number": 8,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Pedri.webp",
+                "backImg": "Barca_images/PedriBack.jpg"
+            },
+            {
+                "name": "Pablo Torre",
+                "position": "Midfielder",
+                "number": 14,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Torre.webp",
+                "backImg": "Barca_images/TorreBack.jpg"
+            },
+            {
+                "name": "López",
+                "position": "Midfielder",
+                "number": 16,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Lopez.webp"
+            },
+            {
+                "name": "Casadó",
+                "position": "Midfielder",
+                "number": 17,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Casado.webp",
+                "backImg": "Barca_images/CasadoBack.jpg"
+            },
+            {
+                "name": "Olmo",
+                "position": "Midfielder",
+                "number": 20,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Olmo.webp",
+                "backImg": "Barca_images/OlmoBack.jpg"
+            },
+            {
+                "name": "Frenkie De Jong",
+                "position": "Midfielder",
+                "number": 21,
+                "nation": "nations/Netherlands.png",
+                "img": "Barca_images/DeJong.webp"
+            },
+            {
+                "name": "Ferran Torres",
+                "position": "Forward",
+                "number": 7,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/FerranTorres.webp"
+            },
+            {
+                "name": "Lewandowski",
+                "position": "Forward",
+                "number": 9,
+                "nation": "nations/Poland.png",
+                "img": "Barca_images/Lewandowski.webp",
+                "backImg": "Barca_images/LewandowskiBack.jpg"
+            },
+            {
+                "name": "Ansu Fati",
+                "position": "Forward",
+                "number": 10,
+                "nation": "nations/Bissau.png",
+                "img": "Barca_images/AnsuFati.webp"
+            },
+            {
+                "name": "Raphinha",
+                "position": "Forward",
+                "number": 11,
+                "nation": "nations/Brazil.png",
+                "img": "Barca_images/Raphinha.webp",
+                "backImg": "Barca_images/RaphinhaBack.jpg"
+            },
+            {
+                "name": "Pau Víctor",
+                "position": "Forward",
+                "number": 18,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Victor.webp",
+                "backImg": "Barca_images/VictorBack.jpg"
+            },
+            {
+                "name": "Lamine Yamal",
+                "position": "Forward",
+                "number": 19,
+                "nation": "nations/Spain.png",
+                "img": "Barca_images/Yamal.webp"
+                }
+            ]
+        }
+    ]
+}
