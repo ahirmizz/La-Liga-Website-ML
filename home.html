@@ -46,6 +46,18 @@
                             <a href="#position" style="font-size: 30px;"">POSITION</a>
                         </span>
                     </div>
+                    <div class="icon dropdown">
+                        <ion-icon name="people-outline" size="large"></ion-icon>
+                        <span>
+                            <a href="#" style="font-size: 30px;" class="dropbtn">TEAMS ▾</a>
+                        </span>
+                    
+                        <div class="dropdown-content">
+                            <a href="teams.html">All Teams</a>
+                            <a href="teams/real_madrid.html">Real Madrid</a>
+                            <a href="teams/barcelona.html">Barcelona</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,17 +65,36 @@
 
         <section class="home" id="home">
             <div class="home-content">
-                <h1>Welcome to <span>La Liga!</span></h1>
-                <h2 class="text-animation">Meet the Team  <span></span></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium corrupti maiores quis nemo placeat dolores! Laboriosam doloribus facere expedita esse, quae eius recusandae incidunt libero obcaecati laudantium, totam quis optio.</p>
+                <h1>Welcome to the La Liga</h1>
+                <h2 class="text-animation">Meet the Teams  <span></span></h2>
+
+                <p>
+                    This website explores the 2025-26 La Liga season featuring team details,
+                    statistics, and AI-powered predictions. Whether you're tracking your favorite
+                    club, curious about who might take the championship for the 25-26 season,
+                    you will find everything here!
+                </p>
+
+                <p>
+                    The <strong>Predictions</strong> page showcases insights from a custom machine
+                    learning model trained on past La Liga data to forecast standings and identify
+                    potential top performers. Be sure to check it out to see which teams are projected 
+                    to dominate in the 25-26 La Liga season!
+                </p>
                 
                 <div class="button">
                     <a href="teams.html" style="--clr:#1e9bff" class="btn"><span>Get Started</span><i></i></a>
+                    <a href="predictions.html" style="--clr:#ff5c5c" class="btn"><span>View Season Champion Predictions</span></a>
                 </div>
             </div>
         </section>
 
         <div class="container"></div>
         <script src="script.js"></script>
+
+        <!--Project Credit-->
+        <footer>
+            <p>© 2025 La Liga Zone - Built by Annabelle Hirmiz using Flask, HTML/CSS, JavaScript, and Machine Learning.</p>
+        </footer>
     </body>
 </html>

@@ -2,10 +2,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const playerContainer = document.getElementById("player-container");
     const searchInput = document.getElementById("search");
 
+    const dropdownBtn = document.querySelector(".dropbtn");
+    const dropdown = document.querySelector(".dropdown");
+
+    if (dropdownBtn && dropdown) {
+        dropdownBtn.addEventListener("click", (event) => {
+            event.preventDefault(); // prevent page jump
+            dropdown.classList.toggle("active");
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (event) => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove("active");
+            }
+        });
+    } else {
+        console.warn("Dropdown button or container not found.");
+    }
+
     if (!playerContainer) {
         console.error("Error - playerContainer not found.");
         return;
     }
+
 
     // Fetch both JSON files
     Promise.all([

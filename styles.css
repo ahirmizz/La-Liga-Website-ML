@@ -25,6 +25,18 @@ body {
     color: #aaa;
 }
 
+@media (max-width: 768px) {
+    .home-sidebar {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .home-content {
+        padding: 20px;
+    }
+}
+
 .home-sidebar {
     position: fixed;
     top: 0px;
@@ -100,6 +112,37 @@ body {
 .icon span a {
     padding: 0px 11px;
     color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 30px;
+    top: 95px;
+    background-color: white;
+    border-radius: 8px;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
 }
 
 .home {
@@ -216,6 +259,19 @@ h1 {
     color: white;
     font-size: 3rem;
     margin-left: 200px;
+}
+
+/* Project Credit */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f5f5f5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .text-animation {

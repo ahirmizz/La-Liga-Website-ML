@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>La Liga Champions Predictor</title>
+</head>
+<body>
+    <h1>La Liga Win Probabilities (2025-26)</h1>
+    <div id = "predictions"></div>
+
+    <script>
+        fetch("winner_predictor/win_probs.json")
+        .then(response => response.json())
+        .then(data => {
+            let container = document.getElementById("predictions");
+
+            data.forEach(team => {
+                let row = document.createElement("p");
+                row.textContent = `${team.squad}: $team["win_probability (%)"]}%`;
+                container.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+[
+    {
+        "squad": "Barcelona",
+        "win_probability (%)": 86.207
+    },
+    {
+        "squad": "Real Madrid",
+        "win_probability (%)": 13.793
+    },
+    {
+        "squad": "Atl\u00e9tico Madrid",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Athletic Club",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Villarreal",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Betis",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Celta Vigo",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Rayo Vallecano",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Osasuna",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Mallorca",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Real Sociedad",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Valencia",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Getafe",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Espanyol",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Alav\u00e9s",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Girona",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Sevilla",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Legan\u00e9s",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Las Palmas",
+        "win_probability (%)": 0.0
+    },
+    {
+        "squad": "Valladolid",
+        "win_probability (%)": 0.0
+    }
+]

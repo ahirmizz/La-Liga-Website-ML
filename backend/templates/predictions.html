@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>La Liga 2025-26 Predictions</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>La Liga 2025-26 Predictions</h1>
+
+    {% if top_champion %}
+    <h2>🏆 Predicted Champion: {{ top_champion.squad }} ({{ top_champion['combined_prob (%)'] }}%) 🏆</h2>
+    {% endif %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th>Points</th>
+                <th>Projected Points</th>
+                <th>Pts/MP</th>
+                <th>Goal Difference</th>
+                <th>Games Left</th>
+                <th>Winning Probability (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for team in predictions %}
+            <tr>
+                <td>{{ team.squad }}</td>
+                <td>{{ team.pts }}</td>
+                <td>{{ team.projected_pts }}</td>
+                <td>{{ team['pts/mp'] }}</td>
+                <td>{{ team.gd }}</td>
+                <td>{{ team.games_left }}</td>
+                <td>{{ team['combined_prob (%)'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
