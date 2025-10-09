@@ -1,3 +1,4 @@
+/* ---------- LAYOUT & BODY ---------- */
 * {
     padding: 0px;
     margin: 0px;
@@ -18,35 +19,42 @@ html {
 }
 
 body {
-    /* ZOOM OUT */
     transform: scale(0.7);
     transform-origin: top center;
     background-color: #0C3559;
     color: #aaa;
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
     .home-sidebar {
+        position: relative;
         width: 100%;
         height: auto;
-        display: flex;
+        flex-direction: row;
         justify-content: space-around;
     }
     .home-content {
-        padding: 20px;
+        margin-right: 0;
+        padding: 2rem;
+        text-align: center;
     }
 }
 
+/* ---------- SIDEBAR ---------- */
 .home-sidebar {
     position: fixed;
     top: 0px;
-    left: -40px;
+    left: -480px;
     width: 100px;
+    height: 1500px;
     flex-direction: column;
     z-index: 1;
     display: flex;
     justify-content: start;
-    height: 1200px;
     padding: 1rem 5%;
     background: #0f1010;
     overflow: hidden;
@@ -66,7 +74,6 @@ body {
     padding: 40px 0px;
     margin-left: -2px;
     margin-bottom: -40px;
-
 }
 
 .home-sidebar .logo span {
@@ -98,7 +105,6 @@ body {
 
 .home-sidebar .links .icon span {
     display: inline-block;
-    font-size: 17px;
     margin-left: 20px;
 }
 
@@ -114,6 +120,7 @@ body {
     color: white;
 }
 
+/* Dropdown for "TEAMS" with multiple links attached */
 .dropdown {
     position: relative;
 }
@@ -138,13 +145,14 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: #f0f0f0
+    background-color: #f0f0f0;
 }
 
 .dropdown.active .dropdown-content {
     display: block;
 }
 
+/* ---------- HOME CONTENT ---------- */
 .home {
     display: flex;
     align-items: center;
@@ -158,122 +166,69 @@ body {
     align-items: baseline;
     text-align: left;
     justify-content: center;
-    margin-top: 3rem;
-    margin-right: 300px;
+    margin: 3rem 300px 0 0;
 }
 
-.home-content h1 {
-    margin-left: 380px;
+/* Title */
+h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin: 120px 0 120px 380px;
 }
 
-.home-content h3 {
+/* Text for "Meet The Teams" */
+.home-content h2 {
+    margin-top: 50px;
     font-size: 2rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    line-height: 1;
 }
 
+/* Website Description */
 .home-content p {
+    margin-top: 50px;
     font-size: 1rem;
     font-weight: 200;
     line-height: 1.8;
     max-width: 1000px;
 }
 
+/* ---------- BUTTONS ---------- */
+/* Buttons linked to Teams Page and Winner Prediction Page */
 .btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    transition: all 0.3s ease;
     position: relative;
-    background: #fff;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 2em;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    padding: 10px 30px;
-    display: inline-flex;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.5s;
+    top: 80px;
+    margin-right: 35px;
 }
 
 .btn:hover {
-    background: rgb(2, 232, 232);
-    ;
-    color: var(--clr);
-    letter-spacing: 0.25em;
-    box-shadow: 0 0 50px var(--clr);
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
-.btn:before {
-    content: '';
-    position: absolute;
-    inset: 2px;
-    background: #182848;
-}
-
-a span {
-    position: relative;
-    z-index: 1;
-}
-
-a i {
-    position: absolute;
-    inset: 0;
-    display: block;
-}
-
-a i::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 80%;
-    width: 10px;
-    height: 4px;
-    background: #182848;
-    transform: translate(-50%) skewX(325deg);
-    transition: 0.5s;
-}
-
-a:hover i::before {
-    width: 20px;
-    left: 20%;
-}
-
-a i::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    width: 10px;
-    height: 4px;
-    background: #182848;
-    transform: translate(-50%) skewX(325deg);
-    transition: 0.5s;
-}
-
-a:hover i::after {
-    width: 20px;
-    left: 80%;
-}
-
-h1 {
-    color: white;
-    font-size: 3rem;
-    margin-left: 200px;
-}
-
-/* Project Credit */
+/* ---------- FOOTER ---------- */
+/* Project Credit on bottom of home page */
 footer {
     text-align: center;
     padding: 10px;
     font-size: 14px;
-    color: #555;
-    background-color: #f5f5f5;
+    color: #ccc;
+    background-color: #0f1010;
     position: fixed;
-    bottom: 0;
+    bottom: -890px;
     left: 0;
     width: 100%;
+    border-top: 1px solid #222;
 }
 
+/* ---------- TEXT ANIMATIONS ---------- */
+/* Display La Liga Teams for 25-26 Season */
 .text-animation {
     font-size: 34px;
     font-weight: 600;
@@ -288,7 +243,6 @@ footer {
     position: relative;
 }
 
-/* FIX */
 .text-animation span::before {
     content: "";
     display: inline-block;
@@ -297,72 +251,66 @@ footer {
 
 .text-animation span::after {
     content: "";
-    background-color: rgb(165, 165, 244);
     position: absolute;
     width: 2px;
     height: 100%;
-    border-left: 3px solid rgb(1, 1, 8);
     right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps (14) infinite;
 }
 
-@keyframes cursor {
-    to {
-        border-left: 2px solid rgb(219, 0, 0);
-    }
-}
-
+/* ---------- KEYFRAMES ---------- */
+/* Cycles through La Liga team names for text animation */
 @keyframes words {
     0% {
-        content: "Deportivo Alavés";
-    }
-
-    5% {
         content: "Athletic Club";
     }
 
-    10% {
+    5% {
         content: "Atlético Madrid";
     }
 
-    15% {
-        content: "Barcelona";
-    }
-
-    20% {
-        content: "Celta De Vigo";
-    }
-
-    25% {
-        content: "RCD Espanyol";
-    }
-
-    30% {
-        content: "Getafe C.F.";
-    }
-
-    35% {
-        content: "Girona F.C.";
-    }
-
-    40% {
-        content: "UD Las Palmas";
-    }
-
-    45% {
-        content: "CD Leganés";
-    }
-
-    50% {
-        content: "RCD Mallorca";
-    }
-
-    55% {
+    10% {
         content: "CA Osasuna";
     }
 
-    60% {
+    15% {
+        content: "Celta De Vigo";
+    }
+
+    20% {
+        content: "Deportivo Alavés";
+    }
+
+    25% {
+        content: "Elche CF";
+    }
+
+    30% {
+        content: "FC Barcelona";
+    }
+
+    35% {
+        content: "Getafe CF";
+    }
+
+    40% {
+        content: "Girona FC";
+    }
+
+    45% {
+        content: "Levante UD";
+    }
+
+    50% {
         content: "Rayo Vallecano";
+    }
+
+    55% {
+        content: "RCD Espanyol";
+    }
+
+    60% {
+        content: "RCD Mallorca";
     }
 
     65% {
@@ -374,55 +322,38 @@ footer {
     }
 
     75% {
-        content: "Real Sociedad";
+        content: "Real Oviedo";
     }
 
     80% {
-        content: "Real Valladolid";
+        content: "Real Sociedad";
     }
-}
-
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-
-    10% {
-        width: calc(100% + 8px);
-    }
-
-    20% {
-        width: calc(100% + 8px);
-    }
-
-    40% {
-        width: calc(100% + 8px);
-    }
-
-    50% {
-        width: 0;
-    }
-
-    60% {
-        width: 0;
-    }
-
-    70% {
-        width: 0;
+    
+    85% {
+        content: "Sevilla FC";
     }
 
     90% {
-        width: calc(100% + 8px);
+        content: "Valencia CF";
+    }
+
+    95% {
+        content: "Villarreal CF";
     }
 
     100% {
-        width: calc(100% + 8px);
+        content: "Athletic Club"; /* loops back smoothly */
     }
 }
 
 .layout {
     display: flex;
 }
+
+
+
+
+
 
 /* TEAMS PAGE */
 .teams-navbar {
@@ -533,8 +464,7 @@ footer {
 .teams-section {
     padding: 5rem 10%;
     text-align: center;
-    margin-bottom: 1rem;
-    margin-top: 5rem;
+    margin: 5rem 0 1rem 0;
 }
 
 .teams h1 {
@@ -583,9 +513,7 @@ footer {
     height: 3.13rem;
     width: 31.25rem;
     background: white;
-    margin-left: 12.5rem;
-    margin-bottom: 6.25rem;
-    margin-top: 6.25rem;
+    margin: 6.25rem 0 6.25rem 12.5rem;
     border-radius: 3.13rem;
     box-shadow: 0 10px 10px rgb(198, 25, 97);
 }
