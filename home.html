@@ -4,51 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>La Liga Zone</title>
+
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <div class="home-sidebar">
-            <div class="wrapper">
-                <div class="logo">
-                    <span>
-                        <img src="LaLiga Logo.png" alt="La Liga Logo" width="260px">
-                    </span>
-                </div>
-            
-                <div class="links">
-                    <div class="icon">
-                        <ion-icon name="home-outline" size="large"></ion-icon>
-
-                        <span>
-                            <a href="home.html" style="font-size: 30px;">HOME</a>
-                        </span>
-                    </div>
-                    <div class="icon dropdown">
-                        <ion-icon name="people-outline" size="large"></ion-icon>
-                        <span>
-                            <a href="#" style="font-size: 30px;" class="dropbtn">TEAMS ▾</a>
-                        </span>
-                    
-                        <div class="dropdown-content">
-                            <a href="teams.html">All Teams</a>
-                            <a href="teams/real_madrid.html">Real Madrid</a>
-                            <a href="teams/barcelona.html">Barcelona</a>
-                        </div>
-                    </div>
-                    <div class="icon">
-                        <ion-icon name="trophy-outline"></ion-icon>
-                        <span>
-                            <a href="#Champion Prediction" style="font-size: 30px;">CHAMPION PREDICTOR</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <section class="home" id="home">
@@ -76,6 +46,71 @@
                 </div>
             </div>
         </section>
+
+
+        <aside class="sidebar">
+            <!--- Sidebar Header -->
+            <header class="sidebar-header">
+                <a href="#" class="header-logo">
+                    <img src="LaLiga Logo.png" alt="La Liga Logo">
+                </a>
+
+                <button class="sidebar-toggle">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+            </header>
+            <nav class="sidebar-nav">
+                <ul class="nav-list primary-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="material-symbols-outlined">home</span>
+                            <span class="nav-label">HOME</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="home.html" class="nav-link dropdown-link">Home</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown-container">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <span class="material-symbols-outlined">group</span>
+                            <span class="nav-label">TEAMS</span>
+                            <span class="dropdown-icon material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="teams.html" class="nav-link dropdown-link">All Teams</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="real-madrid-players.html" class="nav-link dropdown-link">Real Madrid</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="barcelona-players.html" class="nav-link dropdown-link">Barcelona</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="material-symbols-outlined">trophy</span>
+                            <span class="nav-label">PREDICTIONS</span>
+                        </a>
+                    <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a href="predictions.html" class="nav-link dropdown-link">Predictions</a>
+                    </li>
+                </ul>
+            </li>
+        </nav>
+    </aside>
+
+
+
+
 
         <div class="container"></div>
         <script src="script.js"></script>

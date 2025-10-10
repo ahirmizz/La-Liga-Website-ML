@@ -19,7 +19,6 @@ html {
 }
 
 body {
-    transform: scale(0.7);
     transform-origin: top center;
     background-color: #0C3559;
     color: #aaa;
@@ -45,112 +44,182 @@ body {
 }
 
 /* ---------- SIDEBAR ---------- */
-.home-sidebar {
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: pink;
     position: fixed;
-    top: 0px;
-    left: -480px;
-    width: 100px;
-    height: 1500px;
-    flex-direction: column;
-    z-index: 1;
-    display: flex;
-    justify-content: start;
-    padding: 1rem 5%;
-    background: #0f1010;
-    overflow: hidden;
-    transition: all 500ms ease-in-out;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease;
 }
 
-.home-sidebar:hover {
-    width: 450px;
+.sidebar.collapsed {
+    width: 85px;
 }
 
-.home-sidebar .wrapper {
-    width: 250px;
-    height: 100%;
-}
-
-.home-sidebar .logo {
-    padding: 40px 0px;
-    margin-left: -2px;
-    margin-bottom: -40px;
-}
-
-.home-sidebar .logo span {
-    width: 60px;
-    text-align: center;
+.header-logo img {
+    width: 350px;
     display: block;
+    object-fit: contain;
 }
 
-.home-sidebar .links {
-    padding: 0px 25px;
+.sidebar-nav .nav-item .nav-link {
+    color: white;
+    text-decoration: none;
 }
 
-.home-sidebar .links .icon {
-    margin: 80px 0px;
-    height: 50px;
-    color: #888;
+.sidebar .sidebar-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 25px 20px;
+    justify-content: space-between;
+}
+
+/* Toggle Button */
+.sidebar-header .sidebar-toggle {
+    position: absolute;
+    right: 20px;
+    height: 35px;
+    width: 35px;
+    border: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 40px 0px;
-    border-radius: 5px;
-    transition: all 200ms ease-in-out;
+    border-radius: 8px;
+    background: white;
+    transition: 0.4s ease;
 }
 
-.home-sidebar .links .icon ion-icon {
-    display: inline-block;
-    width: 22px;
-    height: 22px;
+.sidebar-header .sidebar-toggle:hover {
+    background: blue;
 }
 
-.home-sidebar .links .icon span {
-    display: inline-block;
-    margin-left: 20px;
+/* Move toggle to below the logo */
+.sidebar.collapsed .sidebar-toggle {
+    transform: translate(-4px, 65px);
 }
 
-.home-sidebar .links .icon:hover {
-    background: #1f252d;
-    color: #fff;
-    cursor: pointer;
+.sidebar-header .sidebar-toggle span {
+    font-size: 1.75rem;
+    transition: 0.4s ease;
 }
 
-/* SPACE BETWEEN ICON AND LINK*/
-.icon span a {
-    padding: 0px 11px;
+.sidebar.collapsed  .sidebar-toggle span {
+    transform: rotate(180deg);
+}
+
+.sidebar-nav .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    padding: 0 15px;
+    flex-direction: column;
+    transform: translateY(15px);
+    transition: 0.4s ease;
+}
+
+.sidebar-nav .primary-nav {
+    overflow-y: auto;
+}
+
+.sidebar.collapsed .sidebar-nav .primary-nav {
+    overflow-y: unset; /* Displays list of teams when sidebar is collapsed */
+    transform: translateY(65px);
+}
+
+.sidebar-nav .nav-item .nav-link {
     color: white;
+    display: flex;
+    gap: 12px;
+    white-space: nowrap;
+    padding: 11px 15px;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: 0.4s ease;
 }
 
-/* Dropdown for "TEAMS" with multiple links attached */
-.dropdown {
+.sidebar-nav .nav-item:hover > .nav-link:not(.dropdown-title) {
+    color: black;
+    background: white;
+}
+
+.sidebar-nav .nav-link :where(.nav-label, .dropdown-icon) {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .nav-link :where(.nav-label, .dropdown-icon) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Dropdown Styling */
+.sidebar-nav .nav-item {
     position: relative;
 }
 
-.dropdown-content {
-    display: none;
+.sidebar-nav .dropdown-container .dropdown-icon {
+    margin: 0 -4px 0 auto;
+    transition: transform 0.4s ease, opaicty 0.3s 0.2s ease;
+}
+
+.sidebar.collapsed .dropdown-container .dropdown-icon {
+    transition: opacity 0.3s 0s ease;
+}
+
+.sidebar-nav .dropdown-menu {
+    height: 0;
+    overflow-y: hidden;
+    list-style: none;
+    padding-left: 15px;
+    transition: height 0.4s ease;
+}
+
+.sidebar-nav .dropdown-container.open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.sidebar.collapsed .dropdown-menu {
     position: absolute;
-    left: 30px;
-    top: 95px;
-    background-color: white;
-    border-radius: 8px;
-    min-width: 180px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    z-index: 100;
+    left: 100%;
+    top: -10px;
+    opacity: 0;
+    height: auto !important;
+    overflow-y: unset;
+    pointer-events: none;
+    background: pink;
+    padding: 7px 10px 7px 24px;
+    border-radius: 0 10px 10px 0;
+    transition: 0s;
 }
 
-.dropdown-content a {
+.sidebar.collapsed .nav-item:hover .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(10px);
+    transition: 0.4s ease;
+}
+
+.dropdown-menu .nav-item .nav-link {
+    padding: 9px 15px;
+}
+
+.sidebar.collapsed .dropdown-menu .nav-link {
+    padding: 7px 15px;
+}
+
+.dropdown-menu .nav-item .dropdown-title {
+    display: none;
+    font-weight: 500;
+}
+
+.sidebar.collapsed .dropdown-menu .nav-item .dropdown-title {
     display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333;
 }
 
-.dropdown-content a:hover {
-    background-color: #f0f0f0;
-}
-
-.dropdown.active .dropdown-content {
-    display: block;
-}
 
 /* ---------- HOME CONTENT ---------- */
 .home {
