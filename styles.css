@@ -47,7 +47,7 @@ body {
 .sidebar {
     width: 260px;
     height: 100vh;
-    background: pink;
+    background: black;
     position: fixed;
     top: 0;
     left: 0;
@@ -59,9 +59,16 @@ body {
 }
 
 .header-logo img {
-    width: 350px;
+    width: 170px;
     display: block;
     object-fit: contain;
+    transition: all 0.4s ease;
+}
+
+/* When sidebar is collapsed, changes to icon-only image */
+.sidebar.collapsed .header-logo img {
+    content: url(logo-icon.png);
+    width: 60px;
 }
 
 .sidebar-nav .nav-item .nav-link {
@@ -93,7 +100,7 @@ body {
 }
 
 .sidebar-header .sidebar-toggle:hover {
-    background: blue;
+    background: rgba(255, 75, 68);
 }
 
 /* Move toggle to below the logo */
@@ -190,7 +197,7 @@ body {
     height: auto !important;
     overflow-y: unset;
     pointer-events: none;
-    background: pink;
+    background: black;
     padding: 7px 10px 7px 24px;
     border-radius: 0 10px 10px 0;
     transition: 0s;
@@ -288,12 +295,11 @@ footer {
     padding: 10px;
     font-size: 14px;
     color: #ccc;
-    background-color: #0f1010;
     position: fixed;
-    bottom: -890px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    border-top: 1px solid #222;
+    z-index: 100;
 }
 
 /* ---------- TEXT ANIMATIONS ---------- */
@@ -424,7 +430,14 @@ footer {
 
 
 
-/* TEAMS PAGE */
+/* ---------- TEAMS PAGE ---------- */
+
+/*
+.teams-page {
+    zoom: 0.40;
+}
+*/
+
 .teams-navbar {
     display: flex;
     align-items: center;
@@ -437,6 +450,12 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur (10px);
     z-index: 999;
+}
+
+.navbar-logo img {
+    height: 180px;
+    width: 200px;
+    margin-right: 10px;
 }
 
 .navbar-container {
@@ -513,7 +532,6 @@ footer {
         z-index: 999;
     }
 }
-
 
 .teams-header {
     position: fixed;
@@ -617,18 +635,17 @@ input {
 
 .teams .box-container .box {
     padding: 1rem 2rem;
-    transform: translateX(-16rem);
+    transform: translateX(0);
     transition: transform 0.3s ease;
 }
 
 .teams .box-container .box:hover {
-    transform: translateX(-16rem) scale(1.10);
+    transform: translateX(-2rem) scale(1.05);
     z-index: 1;
 }
 
-
 .card {
-    width: 40rem;
+    width: 30rem;
     height: 12rem;
     border-radius: 1.25rem;
     box-shadow: 0 10px 55px black;
@@ -637,8 +654,6 @@ input {
     padding: 10px;
     box-sizing: border-box;
 }
-
-
 
 .logo img {
     width: 17rem;
