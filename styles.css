@@ -438,6 +438,7 @@ footer {
 }
 */
 
+/* ---------- NAVBAR SECTION ---------- */
 .teams-navbar {
     display: flex;
     align-items: center;
@@ -452,12 +453,14 @@ footer {
     z-index: 999;
 }
 
+/* Logo inside navbar */
 .navbar-logo img {
     height: 180px;
     width: 200px;
     margin-right: 10px;
 }
 
+/* Navbar layout container */
 .navbar-container {
     display: flex;
     align-items: center;
@@ -467,6 +470,7 @@ footer {
     max-width: 90%;
 }
 
+/* Menu List */
 .navbar-container .navbar-menu {
     display: flex;
     text-align: center;
@@ -474,6 +478,7 @@ footer {
     list-style: none;
 }
 
+/* Navbar Links Styling */
 .navbar-container .navbar-menu li a {
     text-decoration: none;
     color: #fff;
@@ -486,12 +491,14 @@ footer {
     white-space: nowrap;
 }
 
+/* Navbar hover effect */
 .navbar-container .navbar-menu li a:hover {
     color: #162530;
     background: rgba(188, 212, 229, 0.8);
     border: 2px solid #fff;
 }
 
+/* Menu for smaller screens */
 .navbar-toggle {
     background: none;
     padding: 10px;
@@ -508,6 +515,7 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
+/* Responsive Navbar for mobile view */
 @media (max-width: 55rem) {
     .teams-navbar {
         backdrop-filter: none;
@@ -533,6 +541,7 @@ footer {
     }
 }
 
+/* ---------- HEADER ---------- */
 .teams-header {
     position: fixed;
     top: 0;
@@ -546,12 +555,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-
-.teams-section {
-    padding: 5rem 10%;
-    text-align: center;
-    margin: 5rem 0 1rem 0;
 }
 
 .teams h1 {
@@ -577,12 +580,11 @@ footer {
         1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 
-.real-madrid-card .team-card-rma {
-    display: flex;
-    align-items: center;
-    width: 18.75rem;
-    height: 12.5rem;
-    background: linear-gradient(135deg, blue, pink);
+/* ---------- TEAMS INTRO ---------- */
+.teams-section {
+    padding: 5rem 10%;
+    text-align: center;
+    margin: 5rem 0 1rem 0;
 }
 
 .teams p {
@@ -594,7 +596,15 @@ footer {
     justify-content: center;
 }
 
+.real-madrid-card .team-card-rma {
+    display: flex;
+    align-items: center;
+    width: 18.75rem;
+    height: 12.5rem;
+    background: linear-gradient(135deg, blue, pink);
+}
 
+/* ---------- SEARCH BAR ---------- */
 .search-wrapper .search-box {
     position: relative;
     height: 3.13rem;
@@ -626,24 +636,30 @@ input {
 }
 
 
-/* TEAMS SECTION */
+/* ---------- TEAMS GRID ---------- */
 .teams .box-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);  /* 3 cards per row */
+    gap: 3rem;
+    justify-content: center;                /* centers the grid horizontally */
+    align-items: center;                    /* centers items vertically */
+    margin: 0 auto;                         /* centers the container itself */
+    padding: 0;                             /* removes unwanted spacing */
+    width: 90%;                             /* keeps layout responsive and centered */
 }
 
-.teams .box-container .box {
+/* BOX AND LOGO HOVER EFFECT */
+.teams .box-container .box .box img {
     padding: 1rem 2rem;
-    transform: translateX(0);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.teams .box-container .box:hover {
-    transform: translateX(-2rem) scale(1.05);
-    z-index: 1;
+.teams .box-container .box:hover,
+.teams .box-container .box:hover .logo img {
+    transform: translateY(-10px) scale(1.05);
 }
 
+/* ---------- TEAM CARD STYLING ---------- */
 .card {
     width: 30rem;
     height: 12rem;
@@ -655,14 +671,18 @@ input {
     box-sizing: border-box;
 }
 
+/* Team logo inside card */
 .logo img {
-    width: 17rem;
-    height: 15.63rem;;
-    position: absolute;
-    top: 1.25rem;
-    left: -5rem;
+    width: 280px;
+    height: 200px;
+    position: relative;
+    right: 60px;
+    top: 10px;
+    object-fit: contain;
 }
 
+
+/* Team name on card */
 .team-name {
     position: absolute;
     bottom: 1.25rem;
@@ -670,53 +690,18 @@ input {
 }
 
 .team-name h3 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 900;
     color: white;
     text-shadow: 5px 5px 2px rgba(0,0,0,0.6);
-    letter-spacing: 0.03rem;
-    margin-left: 384px
-}
-
-.logo {
-    width: 150px;
-}
-
-.logo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.atletico-madrid .team-name h3 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: white;
-    text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.6);
-    letter-spacing: 0.03rem;
-    margin-left: 304px
-}
-
-.celta .team-name h3 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: white;
-    text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.6);
-    letter-spacing: 0.03rem;
-    margin-left: 250px
-}
-
-.deportivo-alaves .team-name h3 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: white;
-    text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.6);
-    letter-spacing: 0.03rem;
-    margin-left: 250px
+    letter-spacing: 0.2rem;
+    position: relative;
+    left: 200px;
+    word-break: break-word;
 }
 
 
-
+/* ---------- INDIVIDUAL TEAM COLORS ---------- */
 .athletic-club {
     background: linear-gradient(120deg, #FFFFFF 34.03%, red 34.45%);
 }
@@ -798,10 +783,6 @@ input {
 
 .villarreal {
     background: linear-gradient(120deg, #ffe667 34.03%, #005187 34.45%)
-}
-
-.box:hover {
-    transform: scale(1.2,1.2);
 }
 
 
