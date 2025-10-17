@@ -45,6 +45,28 @@ document.querySelectorAll(".dropdown-toggle").forEach(dropdownToggle => {
     });
 });
 
+/* ----- SEARCH TEAMS ----- */
+const teamSearch = document.getElementById('teamSearch');
+teamSearch.addEventListener('keyup', e => {
+    let currentValue = e.target.value.toLowerCase();
+    let teams = document.querySelectorAll('h3');
+    teams.forEach(team => {
+        if (team.textContent.toLowerCase().includes(currentValue)) {
+            team.parentNode.parentNode.parentNode.style.display = 'block';
+        }
+        else {
+            team.parentNode.parentNode.parentNode.style.display = 'none';
+        }
+    });
+});
+
+/* ----- CARD ANIMATION ----- */
+const teamCards = document.querySelectorAll('.box');
+teamCards.forEach (card => {
+    let randomAniDelay = Math.floor(Math.random() * 500);
+    card.style.animation = `fadeIn 1s .${randomAniDelay}s ease forwards`;
+});
+
 
 document.querySelector(".sidebar-toggle").addEventListener("click", () => {
     closeAllDropdowns();
@@ -52,7 +74,6 @@ document.querySelector(".sidebar-toggle").addEventListener("click", () => {
     // Toggle collpased class on sidebar
     document.querySelector(".sidebar").classList.toggle("collapsed");
 });
-
 
 
     if (!playerContainer) {

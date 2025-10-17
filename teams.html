@@ -15,35 +15,28 @@
     <div class="teams-page">
       <nav class="teams-navbar">
         <div class="navbar-container">
-            <a href="home.html" class="navbar-logo">
-                <img src="logo.png" alt="La Liga Logo"/>
-            </a>
-            <button class="navbar-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
             <ul class="navbar-menu">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="#">Teams</a></li>
-                <li><a href="#">Nations</a></li>
-                <li><a href="#">Position</a></li>
+                <li><a href="#">Predictions</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- SEARCH FOR TEAMS -->
-    <div class="wrapper">
-        <section class="teams" id="teams-section">
-            <h1>La Liga Teams</h1>
-            <p>Discover the latest teams:</p>
-            <div class="search-wrapper">
-                <div class="search-box">
-                    <input type="text" id="search" placeholder="Search Teams">
-                </div>
+    <section class="teams">
+        <h1>La Liga Teams</h1>
+        <p>Discover the latest teams:</p>
+    
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input
+                  type="text" 
+                  id="teamSearch" 
+                  placeholder="Search For Teams"/>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- TEAMS GRID -->
     <section class="teams" id="teams">
@@ -277,6 +270,8 @@
         </div>
     </section>
 </div>
+
+
 
     <script src="script.js"></script>
 </body>

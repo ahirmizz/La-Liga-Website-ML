@@ -498,22 +498,6 @@ footer {
     border: 2px solid #fff;
 }
 
-/* Menu for smaller screens */
-.navbar-toggle {
-    background: none;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 2.2rem;
-    height: 0.2rem;
-    margin: 0.3rem auto;
-    background: #fff;
-    transition: all 0.3s ease-in-out;
-}
 
 /* Responsive Navbar for mobile view */
 @media (max-width: 55rem) {
@@ -534,57 +518,35 @@ footer {
         box-shadow: 0 10px 10px rgba(0,0,0,0.5);
         backdrop-filter: blur(10px);
     }
-
-    .navbar-toggle {
-        display: block;
-        z-index: 999;
-    }
 }
 
 /* ---------- HEADER ---------- */
-.teams-header {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    height: 2600px;
-    padding: 1rem 5%;
-    margin-top: -240px;
-    z-index: 1;
-    overflow-x: hidden;
-    background: #0D0D0D;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
 .teams h1 {
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 12.5rem;
+    align-items: center;
+    justify-content: center;
     font-family: verdana;
     font-weight: 700;
     color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
+
+    /* Creates a 3D Text Shadow */
+    text-shadow: 1px 1px 1px #f35d5d,
+        1px 2px 1px #f35d5d,
+        1px 3px 1px #f35d5d,
+        1px 4px 1px #f35d5d,
+        1px 5px 1px #f35d5d,
+        1px 6px 1px #f35d5d,
+        1px 7px 1px #a80606,
+        1px 8px 1px #a80606,
+        1px 9px 1px #a80606,
+        1px 10px 1px #a80606,
 
         1px 18px 6px rgba(16, 16, 16, 0.4),
         1px 18px 10px rgba(16, 16, 16, 0.2),
         1px 22px 35px rgba(16, 16, 16, 0.2),
         1px 30px 60px rgba(16, 16, 16, 0.4);
-}
-
-/* ---------- TEAMS INTRO ---------- */
-.teams-section {
-    padding: 5rem 10%;
-    text-align: center;
-    margin: 5rem 0 1rem 0;
 }
 
 .teams p {
@@ -594,14 +556,6 @@ footer {
     margin-left: 12.5rem;
     align-items: center;
     justify-content: center;
-}
-
-.real-madrid-card .team-card-rma {
-    display: flex;
-    align-items: center;
-    width: 18.75rem;
-    height: 12.5rem;
-    background: linear-gradient(135deg, blue, pink);
 }
 
 /* ---------- SEARCH BAR ---------- */
@@ -629,10 +583,6 @@ footer {
 
 input {
     font-size: 1rem;
-}
-
-.hide {
-    display: none;
 }
 
 
@@ -711,7 +661,6 @@ input {
 }
 
 .osasuna {
-    /*background: linear-gradient(135deg,#D91A21, #0A346F);*/
     background: linear-gradient(120deg, #D91A21 34.03%, #0A346F 34.45%);
 }
 
@@ -728,7 +677,6 @@ input {
 }
 
 .barcelona {
-    /*background: linear-gradient(135deg, #004D98, #A50044);*/
     background: linear-gradient(120deg, #004D98 34.03%, #A50044 34.45%);
 }
 
@@ -786,8 +734,25 @@ input {
 }
 
 
+/* CARD ANIMATION */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 
-/* Real Madrid Page */
+.box {
+    opacity: 0;
+}
+
+
+
+/* ---------- REAL MADRID PAGE ---------- */
 .Real-Madrid-Header {
     background-color: white;
     display: flex;
@@ -897,6 +862,13 @@ input {
     pointer-events: none;
 }
 
+.real-madrid-card .team-card-rma {
+    display: flex;
+    align-items: center;
+    width: 18.75rem;
+    height: 12.5rem;
+    background: linear-gradient(135deg, blue, pink);
+}
 
 .player-card img {
     position: relative;
