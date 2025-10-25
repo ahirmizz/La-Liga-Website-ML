@@ -1,434 +1,428 @@
 /* ---------- LAYOUT & BODY ---------- */
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: "Maven Pro", sans-serif;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
 }
 
 html {
-    font-size: 20px;
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-    overflow-x: hidden;
+  font-size: 20px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
 }
 
 body {
-    transform-origin: top center;
-    background-color: #0C3559;
-    color: #aaa;
+  transform-origin: top center;
+  background-color: #0c3559;
+  color: #aaa;
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    .layout {
-        flex-direction: column;
-    }
-    .home-sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .home-content {
-        margin-right: 0;
-        padding: 2rem;
-        text-align: center;
-    }
+  .layout {
+    flex-direction: column;
+  }
+  .home-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .home-content {
+    margin-right: 0;
+    padding: 2rem;
+    text-align: center;
+  }
 }
 
 /* ---------- SIDEBAR ---------- */
 .sidebar {
-    width: 260px;
-    height: 100vh;
-    background: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: all 0.4s ease;
+  width: 260px;
+  height: 100vh;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease;
 }
 
 .sidebar.collapsed {
-    width: 85px;
+  width: 85px;
 }
 
 .header-logo img {
-    width: 170px;
-    display: block;
-    object-fit: contain;
-    transition: all 0.4s ease;
+  width: 170px;
+  display: block;
+  object-fit: contain;
+  transition: all 0.4s ease;
 }
 
 /* When sidebar is collapsed, changes to icon-only image */
 .sidebar.collapsed .header-logo img {
-    content: url(logo-icon.png);
-    width: 60px;
+  content: url(logo-icon.png);
+  width: 60px;
 }
 
 .sidebar-nav .nav-item .nav-link {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .sidebar .sidebar-header {
-    display: flex;
-    position: relative;
-    align-items: center;
-    padding: 25px 20px;
-    justify-content: space-between;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 25px 20px;
+  justify-content: space-between;
 }
 
 /* Toggle Button */
 .sidebar-header .sidebar-toggle {
-    position: absolute;
-    right: 20px;
-    height: 35px;
-    width: 35px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    background: white;
-    transition: 0.4s ease;
+  position: absolute;
+  right: 20px;
+  height: 35px;
+  width: 35px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background: white;
+  transition: 0.4s ease;
 }
 
 .sidebar-header .sidebar-toggle:hover {
-    background: rgba(255, 75, 68);
+  background: rgba(255, 75, 68);
 }
 
 /* Move toggle to below the logo */
 .sidebar.collapsed .sidebar-toggle {
-    transform: translate(-4px, 65px);
+  transform: translate(-4px, 65px);
 }
 
 .sidebar-header .sidebar-toggle span {
-    font-size: 1.75rem;
-    transition: 0.4s ease;
+  font-size: 1.75rem;
+  transition: 0.4s ease;
 }
 
-.sidebar.collapsed  .sidebar-toggle span {
-    transform: rotate(180deg);
+.sidebar.collapsed .sidebar-toggle span {
+  transform: rotate(180deg);
 }
 
 .sidebar-nav .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 4px;
-    padding: 0 15px;
-    flex-direction: column;
-    transform: translateY(15px);
-    transition: 0.4s ease;
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  padding: 0 15px;
+  flex-direction: column;
+  transform: translateY(15px);
+  transition: 0.4s ease;
 }
 
 .sidebar-nav .primary-nav {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 .sidebar.collapsed .sidebar-nav .primary-nav {
-    overflow-y: unset; /* Displays list of teams when sidebar is collapsed */
-    transform: translateY(65px);
+  overflow-y: unset; /* Displays list of teams when sidebar is collapsed */
+  transform: translateY(65px);
 }
 
 .sidebar-nav .nav-item .nav-link {
-    color: white;
-    display: flex;
-    gap: 12px;
-    white-space: nowrap;
-    padding: 11px 15px;
-    align-items: center;
-    text-decoration: none;
-    border-radius: 8px;
-    border: 1px solid rgb(255, 255, 255);
-    transition: 0.4s ease;
+  color: white;
+  display: flex;
+  gap: 12px;
+  white-space: nowrap;
+  padding: 11px 15px;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid rgb(255, 255, 255);
+  transition: 0.4s ease;
 }
 
 .sidebar-nav .nav-item:hover > .nav-link:not(.dropdown-title) {
-    color: black;
-    background: white;
+  color: black;
+  background: white;
 }
 
 .sidebar-nav .nav-link :where(.nav-label, .dropdown-icon) {
-    transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .sidebar.collapsed .nav-link :where(.nav-label, .dropdown-icon) {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Dropdown Styling */
 .sidebar-nav .nav-item {
-    position: relative;
+  position: relative;
 }
 
 .sidebar-nav .dropdown-container .dropdown-icon {
-    margin: 0 -4px 0 auto;
-    transition: transform 0.4s ease, opaicty 0.3s 0.2s ease;
+  margin: 0 -4px 0 auto;
+  transition: transform 0.4s ease, opaicty 0.3s 0.2s ease;
 }
 
 .sidebar.collapsed .dropdown-container .dropdown-icon {
-    transition: opacity 0.3s 0s ease;
+  transition: opacity 0.3s 0s ease;
 }
 
 .sidebar-nav .dropdown-menu {
-    height: 0;
-    overflow-y: hidden;
-    list-style: none;
-    padding-left: 15px;
-    transition: height 0.4s ease;
+  height: 0;
+  overflow-y: hidden;
+  list-style: none;
+  padding-left: 15px;
+  transition: height 0.4s ease;
 }
 
 .sidebar-nav .dropdown-container.open .dropdown-icon {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .sidebar.collapsed .dropdown-menu {
-    position: absolute;
-    left: 100%;
-    top: -10px;
-    opacity: 0;
-    height: auto !important;
-    overflow-y: unset;
-    pointer-events: none;
-    background: black;
-    padding: 7px 10px 7px 24px;
-    border-radius: 0 10px 10px 0;
-    transition: 0s;
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  opacity: 0;
+  height: auto !important;
+  overflow-y: unset;
+  pointer-events: none;
+  background: black;
+  padding: 7px 10px 7px 24px;
+  border-radius: 0 10px 10px 0;
+  transition: 0s;
 }
 
 .sidebar.collapsed .nav-item:hover .dropdown-menu {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(10px);
-    transition: 0.4s ease;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(10px);
+  transition: 0.4s ease;
 }
 
 .dropdown-menu .nav-item .nav-link {
-    padding: 9px 15px;
+  padding: 9px 15px;
 }
 
 .sidebar.collapsed .dropdown-menu .nav-link {
-    padding: 7px 15px;
+  padding: 7px 15px;
 }
 
 .dropdown-menu .nav-item .dropdown-title {
-    display: none;
-    font-weight: 500;
+  display: none;
+  font-weight: 500;
 }
 
 .sidebar.collapsed .dropdown-menu .nav-item .dropdown-title {
-    display: block;
+  display: block;
 }
-
 
 /* ---------- HOME CONTENT ---------- */
 .home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
 }
 
 .home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    text-align: left;
-    justify-content: center;
-    margin: 3rem 300px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  text-align: left;
+  justify-content: center;
+  margin: 3rem 300px 0 0;
 }
 
 /* Title */
 h1 {
-    color: white;
-    font-size: 3.5rem;
-    margin: 120px 0 120px 380px;
+  color: white;
+  font-size: 3.5rem;
+  margin: 120px 0 120px 380px;
 }
 
 /* Text for "Meet The Teams" */
 .home-content h2 {
-    margin-top: 50px;
-    font-size: 2rem;
+  margin-top: 50px;
+  font-size: 2rem;
 }
 
 /* Website Description */
 .home-content p {
-    margin-top: 50px;
-    font-size: 1rem;
-    font-weight: 200;
-    line-height: 1.8;
-    max-width: 1000px;
+  margin-top: 50px;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.8;
+  max-width: 1000px;
 }
 
 /* ---------- BUTTONS ---------- */
 /* Buttons linked to Teams Page and Winner Prediction Page */
 .btn {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-    top: 80px;
-    margin-right: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  top: 80px;
+  margin-right: 35px;
 }
 
 .btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
 }
 
 /* ---------- FOOTER ---------- */
 /* Project Credit on bottom of home page */
 footer {
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    color: #ccc;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #ccc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 /* ---------- TEXT ANIMATIONS ---------- */
 /* Display La Liga Teams for 25-26 Season */
 .text-animation {
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-    position: relative;
-    overflow: hidden;
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+  position: relative;
+  overflow: hidden;
 }
 
 .text-animation span {
-    color: rgb(2, 232, 232);
-    display: inline-block;
-    position: relative;
+  color: rgb(2, 232, 232);
+  display: inline-block;
+  position: relative;
 }
 
 .text-animation span::before {
-    content: "";
-    display: inline-block;
-    animation: words 20s infinite;
+  content: "";
+  display: inline-block;
+  animation: words 20s infinite;
 }
 
 .text-animation span::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps (14) infinite;
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps (14) infinite;
 }
 
 /* ---------- KEYFRAMES ---------- */
 /* Cycles through La Liga team names for text animation */
 @keyframes words {
-    0% {
-        content: "Athletic Club";
-    }
+  0% {
+    content: "Athletic Club";
+  }
 
-    5% {
-        content: "Atlético Madrid";
-    }
+  5% {
+    content: "Atlético Madrid";
+  }
 
-    10% {
-        content: "CA Osasuna";
-    }
+  10% {
+    content: "CA Osasuna";
+  }
 
-    15% {
-        content: "Celta De Vigo";
-    }
+  15% {
+    content: "Celta De Vigo";
+  }
 
-    20% {
-        content: "Deportivo Alavés";
-    }
+  20% {
+    content: "Deportivo Alavés";
+  }
 
-    25% {
-        content: "Elche CF";
-    }
+  25% {
+    content: "Elche CF";
+  }
 
-    30% {
-        content: "FC Barcelona";
-    }
+  30% {
+    content: "FC Barcelona";
+  }
 
-    35% {
-        content: "Getafe CF";
-    }
+  35% {
+    content: "Getafe CF";
+  }
 
-    40% {
-        content: "Girona FC";
-    }
+  40% {
+    content: "Girona FC";
+  }
 
-    45% {
-        content: "Levante UD";
-    }
+  45% {
+    content: "Levante UD";
+  }
 
-    50% {
-        content: "Rayo Vallecano";
-    }
+  50% {
+    content: "Rayo Vallecano";
+  }
 
-    55% {
-        content: "RCD Espanyol";
-    }
+  55% {
+    content: "RCD Espanyol";
+  }
 
-    60% {
-        content: "RCD Mallorca";
-    }
+  60% {
+    content: "RCD Mallorca";
+  }
 
-    65% {
-        content: "Real Betis";
-    }
+  65% {
+    content: "Real Betis";
+  }
 
-    70% {
-        content: "Real Madrid";
-    }
+  70% {
+    content: "Real Madrid";
+  }
 
-    75% {
-        content: "Real Oviedo";
-    }
+  75% {
+    content: "Real Oviedo";
+  }
 
-    80% {
-        content: "Real Sociedad";
-    }
-    
-    85% {
-        content: "Sevilla FC";
-    }
+  80% {
+    content: "Real Sociedad";
+  }
 
-    90% {
-        content: "Valencia CF";
-    }
+  85% {
+    content: "Sevilla FC";
+  }
 
-    95% {
-        content: "Villarreal CF";
-    }
+  90% {
+    content: "Valencia CF";
+  }
 
-    100% {
-        content: "Athletic Club"; /* loops back smoothly */
-    }
+  95% {
+    content: "Villarreal CF";
+  }
+
+  100% {
+    content: "Athletic Club"; /* loops back smoothly */
+  }
 }
 
 .layout {
-    display: flex;
+  display: flex;
 }
-
-
-
-
-
 
 /* ---------- TEAMS PAGE ---------- */
 
@@ -440,706 +434,701 @@ footer {
 
 /* ---------- NAVBAR SECTION ---------- */
 .teams-navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5rem;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background: transparent;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur (10px);
-    z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur (10px);
+  z-index: 999;
 }
 
 /* Logo inside navbar */
 .navbar-logo img {
-    height: 180px;
-    width: 200px;
-    margin-right: 10px;
+  height: 180px;
+  width: 200px;
+  margin-right: 10px;
 }
 
 /* Navbar layout container */
 .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 2rem;
-    max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 90%;
 }
 
 /* Menu List */
 .navbar-container .navbar-menu {
-    display: flex;
-    text-align: center;
-    gap: 1.5rem;
-    list-style: none;
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
 }
 
 /* Navbar Links Styling */
 .navbar-container .navbar-menu li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding: 0.2rem 1.25rem;
-    border-radius: 1.25rem;
-    border: 2px solid transparent;
-    transition: all 0.7s ease;
-    white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.2rem 1.25rem;
+  border-radius: 1.25rem;
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
 }
 
 /* Navbar hover effect */
 .navbar-container .navbar-menu li a:hover {
-    color: #162530;
-    background: rgba(188, 212, 229, 0.8);
-    border: 2px solid #fff;
+  color: #162530;
+  background: rgba(188, 212, 229, 0.8);
+  border: 2px solid #fff;
 }
-
 
 /* Responsive Navbar for mobile view */
 @media (max-width: 55rem) {
-    .teams-navbar {
-        backdrop-filter: none;
-    }
+  .teams-navbar {
+    backdrop-filter: none;
+  }
 
-    .navbar-container .navbar-menu {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.7rem !important;
-        position: absolute;
-        height: 100vh;
-        width: 15rem;
-        top: 0;
-        right: 0;
-        padding: 5rem 1.5rem;
-        box-shadow: 0 10px 10px rgba(0,0,0,0.5);
-        backdrop-filter: blur(10px);
-    }
+  .navbar-container .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 15rem;
+    top: 0;
+    right: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
 }
 
 /* ---------- HEADER ---------- */
 .teams h1 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    margin-left: 12.45rem;
-    align-items: center;
-    justify-content: center;
-    font-family: "verdana", serif;
-    font-weight: 700;
-    color: #f5f5f5;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 12.45rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "verdana", serif;
+  font-weight: 700;
+  color: #f5f5f5;
 
-    /* Creates a 3D Text Shadow */
-    text-shadow: 1px 1px 1px #f35d5d,
-        1px 2px 1px #f35d5d,
-        1px 3px 1px #f35d5d,
-        1px 4px 1px #f35d5d,
-        1px 5px 1px #f35d5d,
-        1px 6px 1px #f35d5d,
-        1px 7px 1px #a80606,
-        1px 8px 1px #a80606,
-        1px 9px 1px #a80606,
-        1px 10px 1px #a80606,
-
-        1px 18px 6px rgba(16, 16, 16, 0.4),
-        1px 18px 10px rgba(16, 16, 16, 0.2),
-        1px 22px 35px rgba(16, 16, 16, 0.2),
-        1px 30px 60px rgba(16, 16, 16, 0.4);
+  /* Creates a 3D Text Shadow */
+  text-shadow: 1px 1px 1px #f35d5d, 1px 2px 1px #f35d5d, 1px 3px 1px #f35d5d,
+    1px 4px 1px #f35d5d, 1px 5px 1px #f35d5d, 1px 6px 1px #f35d5d,
+    1px 7px 1px #a80606, 1px 8px 1px #a80606, 1px 9px 1px #a80606,
+    1px 10px 1px #a80606, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 18px 10px rgba(16, 16, 16, 0.2), 1px 22px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 
 .teams p {
-    font-family: "Gill Sans", sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 4.5rem 0 3rem 12.5rem;
-    color: #ccc;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 4.5rem 0 3rem 12.5rem;
+  color: #ccc;
 }
 
 /* ---------- SEARCH BAR ---------- */
 .search-wrapper .search-box {
-    position: relative;
-    height: 3.13rem;
-    width: 31.25rem;
-    background: white;
-    margin: 2.25rem 0 10.25rem 11.9rem;
-    border-radius: 3.13rem;
+  position: relative;
+  height: 3.13rem;
+  width: 31.25rem;
+  background: white;
+  margin: 2.25rem 0 10.25rem 11.9rem;
+  border-radius: 3.13rem;
 }
 
 .search-box input {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 25px;
-    background: #fff;
-    outline: none;
-    border: none;
-    padding-left: 1.25rem;
-    font-size: 1.5rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background: #fff;
+  outline: none;
+  border: none;
+  padding-left: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .search-box ion-icon {
-    font-size: 40px;
-    color: #777;
-    margin: 10px 4px 0 6px
+  font-size: 40px;
+  color: #777;
+  margin: 10px 4px 0 6px;
 }
-
-
 
 /* ---------- TEAMS GRID ---------- */
 .teams .box-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 cards per row */
-    gap: 3rem;
-    justify-content: center;                /* centers the grid horizontally */
-    align-items: center;                    /* centers items vertically */
-    margin: 0 auto;                         /* centers the container itself */
-    padding: 0;                             /* removes unwanted spacing */
-    width: 90%;                             /* keeps layout responsive and centered */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 3rem;
+  justify-content: center; /* centers the grid horizontally */
+  align-items: center; /* centers items vertically */
+  margin: 0 auto; /* centers the container itself */
+  padding: 0; /* removes unwanted spacing */
+  width: 90%; /* keeps layout responsive and centered */
 }
 
 /* BOX AND LOGO HOVER EFFECT */
 .teams .box-container .box .box img {
-    padding: 1rem 2rem;
-    transition: all 0.3s ease;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
 }
 
 .teams .box-container .box:hover,
 .teams .box-container .box:hover .logo img {
-    transform: translateY(-10px) scale(1.05);
+  transform: translateY(-10px) scale(1.05);
 }
 
 /* ---------- TEAM CARD STYLING ---------- */
 .card {
-    width: 30rem;
-    height: 12rem;
-    border-radius: 1.25rem;
-    box-shadow: 0 10px 55px black;
-    position: relative;
-    overflow: hidden;
-    padding: 10px;
-    box-sizing: border-box;
+  width: 30rem;
+  height: 12rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 55px black;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 /* Team logo inside card */
 .logo img {
-    width: 280px;
-    height: 200px;
-    position: relative;
-    right: 60px;
-    top: 10px;
-    object-fit: contain;
+  width: 280px;
+  height: 200px;
+  position: relative;
+  right: 60px;
+  top: 10px;
+  object-fit: contain;
 }
-
 
 /* Team name on card */
 .team-name {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 1.25rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
 }
 
 .team-name h3 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: white;
-    text-shadow: 5px 5px 2px rgba(0,0,0,0.6);
-    letter-spacing: 0.2rem;
-    position: relative;
-    left: 200px;
-    word-break: break-word;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.2rem;
+  position: relative;
+  left: 200px;
+  word-break: break-word;
 }
-
 
 /* ---------- INDIVIDUAL TEAM COLORS ---------- */
 .athletic-club {
-    background: linear-gradient(120deg, #FFFFFF 34.03%, red 34.45%);
+  background: linear-gradient(120deg, #ffffff 34.03%, red 34.45%);
 }
 
 .atletico-madrid {
-    background: linear-gradient(120deg, #272e61 34.03%, #cb3524 34.45%);
+  background: linear-gradient(120deg, #272e61 34.03%, #cb3524 34.45%);
 }
 
 .osasuna {
-    background: linear-gradient(120deg, #D91A21 34.03%, #0A346F 34.45%);
+  background: linear-gradient(120deg, #d91a21 34.03%, #0a346f 34.45%);
 }
 
 .celta {
-    background: linear-gradient(120deg, #8AC3EE 34.03%, #e24869 34.45%);
+  background: linear-gradient(120deg, #8ac3ee 34.03%, #e24869 34.45%);
 }
 
 .deportivo-alaves {
-    background: linear-gradient(120deg, #FFFFFF 34.03%, #0232A0 34.45%);
+  background: linear-gradient(120deg, #ffffff 34.03%, #0232a0 34.45%);
 }
 
 .elche {
-    background: linear-gradient(120deg, #E6C777 34.03%, #1B458F 34.45%);
+  background: linear-gradient(120deg, #e6c777 34.03%, #1b458f 34.45%);
 }
 
 .barcelona {
-    background: linear-gradient(120deg, #004D98 34.03%, #A50044 34.45%);
+  background: linear-gradient(120deg, #004d98 34.03%, #a50044 34.45%);
 }
 
 .getafe {
-    background: linear-gradient(120deg, #FFFFFF 34.03%, #005999 34.45%);
+  background: linear-gradient(120deg, #ffffff 34.03%, #005999 34.45%);
 }
 
 .girona {
-    background: linear-gradient(120deg, #FFFFFF 34.03%, #cd2535 34.45%);
+  background: linear-gradient(120deg, #ffffff 34.03%, #cd2535 34.45%);
 }
 
 .levante {
-    background: linear-gradient(120deg, #025ba5 34.03%, #b4063f 34.45%)
+  background: linear-gradient(120deg, #025ba5 34.03%, #b4063f 34.45%);
 }
 
 .rayo-vallecano {
-    background: linear-gradient(120deg, #FFFFFF 34.03%, #e53027 34.45%);
+  background: linear-gradient(120deg, #ffffff 34.03%, #e53027 34.45%);
 }
 
 .rcd-espanyol {
-    background: linear-gradient(120deg, #FFFFFF 34.03%, #0281cd 34.45%);
+  background: linear-gradient(120deg, #ffffff 34.03%, #0281cd 34.45%);
 }
 
 .rcd-mallorca {
-    background: linear-gradient(120deg, #fef708 34.03%, #ec1a23 34.45%);
+  background: linear-gradient(120deg, #fef708 34.03%, #ec1a23 34.45%);
 }
 
 .real-betis {
-    background: linear-gradient(120deg, #ffffff 34.03%, #097f47 34.45%, #0ab363 82.77%)
+  background: linear-gradient(
+    120deg,
+    #ffffff 34.03%,
+    #097f47 34.45%,
+    #0ab363 82.77%
+  );
 }
 
 .real-madrid {
-    background: linear-gradient(120deg, #d4af37 34.03%, rgba(255, 255, 255, 0) 34.45%, #003399)
+  background: linear-gradient(
+    120deg,
+    #d4af37 34.03%,
+    rgba(255, 255, 255, 0) 34.45%,
+    #003399
+  );
 }
 
 .real-oviedo {
-    background: linear-gradient(120deg, #ffd200 34.03%, #094ca1 34.45%);
+  background: linear-gradient(120deg, #ffd200 34.03%, #094ca1 34.45%);
 }
 
 .real-sociedad {
-    background: linear-gradient(120deg, #FFFFFF 34.03%, #0167b0 34.45%);
+  background: linear-gradient(120deg, #ffffff 34.03%, #0167b0 34.45%);
 }
 
 .sevilla {
-    background: linear-gradient(120deg, #ffffff 34.03%, rgb(154, 14, 28) 34.45%, #d70f22)
+  background: linear-gradient(
+    120deg,
+    #ffffff 34.03%,
+    rgb(154, 14, 28) 34.45%,
+    #d70f22
+  );
 }
 
 .valencia {
-    background: linear-gradient(120deg, white 34.03%, black 34.45%);
-    
+  background: linear-gradient(120deg, white 34.03%, black 34.45%);
 }
 
 .villarreal {
-    background: linear-gradient(120deg, #ffe667 34.03%, #005187 34.45%)
+  background: linear-gradient(120deg, #ffe667 34.03%, #005187 34.45%);
 }
-
 
 /* CARD ANIMATION */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .box {
-    opacity: 0;
+  opacity: 0;
 }
-
-
 
 /* ---------- REAL MADRID PAGE ---------- */
 .Real-Madrid-Header {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 30px 60px;
-    width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 60px;
+  width: 100%;
 }
 
-
 .Real-Madrid-Header body {
-    margin-left: 450px;
-    margin-top: 100px;
+  margin-left: 450px;
+  margin-top: 100px;
 }
 
 .Real-Madrid-Header h1 {
-    position: relative;
-    font-family: Bebas Neue;
-    font-size: 70px;
-    color: black;
+  position: relative;
+  font-family: Bebas Neue;
+  font-size: 70px;
+  color: black;
 }
 
 .Real-Madrid-Page .front {
-    background: url(RMA_images/RM_background.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+  background: url(RMA_images/RM_background.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 /* Player grid layout for the cards */
 .player-position {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
 .back .player-back-image {
-    height: 100%;
-    width: 100%;
-    margin-top: -50px;
-    z-index: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: -50px;
+  z-index: 0;
 }
 
 .back::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
 .back .player-stats-placement {
-    position: relative;
-    font-size: 35px;
-    color: white;
-    margin-top: 50px;
-    z-index: 2; /* Puts stats text on top of the overlay */
+  position: relative;
+  font-size: 35px;
+  color: white;
+  margin-top: 50px;
+  z-index: 2; /* Puts stats text on top of the overlay */
 }
 
 .back .player-name {
-    position: relative;
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    margin-top: -40px;
-    z-index: 2;
-
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  margin-top: -40px;
+  z-index: 2;
 }
 
-.clean-sheets, .penalties-saved,
-.goals, .assists, .matches-played,
+.clean-sheets,
+.penalties-saved,
+.goals,
+.assists,
+.matches-played,
 .minutes-played {
-    font-size: 30px;
-    margin-bottom: 60px;
+  font-size: 30px;
+  margin-bottom: 60px;
 }
 
 .minutes-played {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .player-card {
-    width: 400px;
-    height: 450px;
-    position: relative;
-    perspective: 1000px;
-    margin-bottom: 50px;
+  width: 400px;
+  height: 450px;
+  position: relative;
+  perspective: 1000px;
+  margin-bottom: 50px;
 }
 
 .front {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .front::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    pointer-events: none;
-    z-index: 1;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  pointer-events: none;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .real-madrid-card .team-card-rma {
-    display: flex;
-    align-items: center;
-    width: 18.75rem;
-    height: 12.5rem;
-    background: linear-gradient(135deg, blue, pink);
+  display: flex;
+  align-items: center;
+  width: 18.75rem;
+  height: 12.5rem;
+  background: linear-gradient(135deg, blue, pink);
 }
 
 .player-card img {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-    transform: translateY(50px);
+  position: relative;
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  transform: translateY(50px);
 }
 
 .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.8s ease-in-out;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
 }
 
 .front,
 .back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
 }
 
 .front {
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    z-index: 2;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
 }
 
 /* Player Name */
 .front h2 {
-    font-family: "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 40px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 350px;
-    left: 20px;
-    white-space: nowrap;
-    color: white;
-    padding: 5px 10px;
-    z-index: 2;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 40px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 350px;
+  left: 20px;
+  white-space: nowrap;
+  color: white;
+  padding: 5px 10px;
+  z-index: 2;
 }
 
 .back {
-    background: #fff;
-    color: #333;
-    padding: 20px 40px;
-    transform: rotateY(180deg);
-    backface-visibility: hidden; /* hides front content */
-    position: absolute;
+  background: #fff;
+  color: #333;
+  padding: 20px 40px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden; /* hides front content */
+  position: absolute;
 }
 
 .player-card:hover .card-inner {
-    transform: rotateY(-180deg);
-    box-shadow: 0 10px 20px rgba(0,0,0, 0.2);
+  transform: rotateY(-180deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Styling for player details*/
 .front .player-number {
-    position: absolute;
-    top: 10px;
-    right: 50%;
-    font-family: "Tenor Sans", sans-serif;
-    font-weight: 700;
-    padding: 4px 8px;
-    border-radius: 8px;
-    font-style: normal;
-    font-size: 105px;
-    color: #4a0404;
+  position: absolute;
+  top: 10px;
+  right: 50%;
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-style: normal;
+  font-size: 105px;
+  color: #4a0404;
 }
 
 .front::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .front .nation-flag {
-    width: 65px;
-    height: 65px;
-    right: 30px;
-    position: absolute;
-    margin-bottom: 100%;
+  width: 65px;
+  height: 65px;
+  right: 30px;
+  position: absolute;
+  margin-bottom: 100%;
 }
 
 .position-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 70px;
-    width: 100%;
-    padding: 30px 20px;
-    margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 70px;
+  width: 100%;
+  padding: 30px 20px;
+  margin-right: 100px;
 }
 
 .position-header {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: "Allan", serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 100px;
-    text-transform: uppercase;
-    color: white;
-    padding-top: 100px;
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Allan", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 100px;
+  text-transform: uppercase;
+  color: white;
+  padding-top: 100px;
 }
 
 .back img {
-    width: 330px;
-    height: 410px;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
+  width: 330px;
+  height: 410px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* Barcelona Page */
 .Barcelona-Header {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 30px 60px;
-    width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 60px;
+  width: 100%;
 }
 
-
 .Barcelona-Header body {
-    margin-left: 450px;
-    margin-top: 100px;
+  margin-left: 450px;
+  margin-top: 100px;
 }
 
 .Barcelona-Header h1 {
-    position: relative;
-    font-family: Bebas Neue;
-    font-size: 70px;
-    color: black;
+  position: relative;
+  font-family: Bebas Neue;
+  font-size: 70px;
+  color: black;
 }
 
 .Barcelona-Page .front {
-    background: url(RMA_images/RM_background.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+  background: url(RMA_images/RM_background.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .Barcelona .team-logo {
-    position: relative;
-    margin-left: auto;
-    margin-right: 0;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .Barcelona-Page h1 {
-    position: relative;
-    bottom: 120px;
-    font-family: Bebas Neue;
-    font-size: 100px;
+  position: relative;
+  bottom: 120px;
+  font-family: Bebas Neue;
+  font-size: 100px;
 }
 
 .Barcelona-Page .front {
-    background: url(Barca_images/Barca_background.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+  background: url(Barca_images/Barca_background.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .Barcelona-Page .player-position {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
 .search-player input[type="text"]:focus {
-    border-color: black;
+  border-color: black;
 }
 
 .search-player button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
 }
 
 .search-player button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Display Results Section */
 #display-results {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
 }
-
 
 /* Valencia Page */
 .Valencia-Header {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 30px 60px;
-    width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 60px;
+  width: 100%;
 }
 
-
 .Valencia-Header body {
-    margin-left: 450px;
-    margin-top: 100px;
+  margin-left: 450px;
+  margin-top: 100px;
 }
 
 .Valencia-Header h1 {
-    position: relative;
-    font-family: Bebas Neue;
-    font-size: 70px;
-    color: black;
+  position: relative;
+  font-family: Bebas Neue;
+  font-size: 70px;
+  color: black;
 }
 
 .Valencia-Page .front {
-    background: url(RMA_images/RM_background.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+  background: url(RMA_images/RM_background.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .Valencia .team-logo {
-    position: relative;
-    margin-left: auto;
-    margin-right: 0;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .Valencia-Page h1 {
-    position: relative;
-    bottom: 120px;
-    font-family: Bebas Neue;
-    font-size: 100px;
+  position: relative;
+  bottom: 120px;
+  font-family: Bebas Neue;
+  font-size: 100px;
 }
 
 .Valencia-Page .front {
-    background: url(Barca_images/Barca_background.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+  background: url(Barca_images/Barca_background.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .Valencia-Page .player-position {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
 }
