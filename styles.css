@@ -524,10 +524,10 @@ footer {
 .teams h1 {
     font-size: 3rem;
     margin-bottom: 3rem;
-    margin-left: 12.5rem;
+    margin-left: 12.45rem;
     align-items: center;
     justify-content: center;
-    font-family: verdana;
+    font-family: "verdana", serif;
     font-weight: 700;
     color: #f5f5f5;
 
@@ -550,12 +550,11 @@ footer {
 }
 
 .teams p {
+    font-family: "Gill Sans", sans-serif;
     font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-    margin-left: 12.5rem;
-    align-items: center;
-    justify-content: center;
+    font-weight: 700;
+    margin: 4.5rem 0 3rem 12.5rem;
+    color: #ccc;
 }
 
 /* ---------- SEARCH BAR ---------- */
@@ -564,9 +563,8 @@ footer {
     height: 3.13rem;
     width: 31.25rem;
     background: white;
-    margin: 6.25rem 0 6.25rem 12.5rem;
+    margin: 2.25rem 0 10.25rem 11.9rem;
     border-radius: 3.13rem;
-    box-shadow: 0 10px 10px rgb(198, 25, 97);
 }
 
 .search-box input {
@@ -581,9 +579,12 @@ footer {
     font-size: 1.5rem;
 }
 
-input {
-    font-size: 1rem;
+.search-box ion-icon {
+    font-size: 40px;
+    color: #777;
+    margin: 10px 4px 0 6px
 }
+
 
 
 /* ---------- TEAMS GRID ---------- */

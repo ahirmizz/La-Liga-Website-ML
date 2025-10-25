@@ -47,15 +47,18 @@ document.querySelectorAll(".dropdown-toggle").forEach(dropdownToggle => {
 
 /* ----- SEARCH TEAMS ----- */
 const teamSearch = document.getElementById('teamSearch');
+
 teamSearch.addEventListener('keyup', e => {
-    let currentValue = e.target.value.toLowerCase();
+    let currentValue = e.target.value.toLowerCase().replace(/\s+/g, '');
+
     let teams = document.querySelectorAll('h3');
     teams.forEach(team => {
-        if (team.textContent.toLowerCase().includes(currentValue)) {
-            team.parentNode.parentNode.parentNode.style.display = 'block';
+        let teamName = team.textContent.toLowerCase().replace(/\s+/g, '');
+        if (teamName.includes(currentValue)) {
+            team.closest('.box').style.display = 'block';
         }
         else {
-            team.parentNode.parentNode.parentNode.style.display = 'none';
+            team.closest('.box').style.display = 'none';
         }
     });
 });
