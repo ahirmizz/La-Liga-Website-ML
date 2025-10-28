@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>La Liga Zone</title>
+        <title>25-26 Win Predictor</title>
 
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -19,36 +19,16 @@
         <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
+  <body>
 
+    <div id="champion-prediction">
+      <h2>Predicted La Liga 2025–26 Champion 🏆</h2>
+      <p id="winner"></p>
+      <h3>Top 5 Predicted Contenders:</h3>
+      <ul id="top5"></ul>
+    </div>
 
-        <section class="home" id="home">
-            <div class="home-content">
-                <h1>Welcome to La Liga</h1>
-                <h2 class="text-animation">Meet the Teams  <span></span></h2>
-
-                <p>
-                    This website explores the 2025-26 La Liga season featuring team details,
-                    statistics, and AI-powered predictions. Whether you're tracking your favorite
-                    club, curious about who might take the championship for the 25-26 season,
-                    you will find everything here!
-                </p>
-
-                <p>
-                    The <strong>Predictions</strong> page showcases insights from a custom machine
-                    learning model trained on past La Liga data to forecast standings and identify
-                    potential top performers. Be sure to check it out to see which teams are projected 
-                    to dominate in the 25-26 La Liga season!
-                </p>
-                
-                <div class="button">
-                    <a href="teams.html" style="--clr:#1e9bff" class="btn"><span>Explore Teams</span><i></i></a>
-                    <a href="stats.html" style="--clr:#ff5c5c" class="btn"><span>Champion Predictions</span></a>
-                </div>
-            </div>
-        </section>
-
-
-        <aside class="sidebar">
+    <aside class="sidebar">
             <!--- Sidebar Header -->
             <header class="sidebar-header">
                 <a href="#" class="header-logo">
@@ -110,17 +90,26 @@
             </li>
         </nav>
     </aside>
+  </body>
 
+  <script>
+    fetch("../data/predicted_champions.json")
+      .then((response) => response.json())
+      .then((data) => {
+        // Display winner
+        const winnerEl = document.getElementById("winner");
+        winnerEl.textContent = `${data.predicted_winner.team} - Winning Probability: ${data.predicted_winner.probability}%`;
 
-
-
-
-        <div class="container"></div>
-        <script src="script.js"></script>
-
-        <!--Project Credit-->
-        <footer>
-            <p>© 2025 La Liga Zone - Built by Annabelle Hirmiz using Flask, HTML/CSS, JavaScript, and Machine Learning.</p>
-        </footer>
-    </body>
+        // Display top 5 contenders
+        const top5El = document.getElementById("top5");
+        data.top5_contenders.forEach((contender) => {
+          const li = document.createElement("li");
+          li.textContent = `${contender.squad} - ${contender[
+            "combined_prob (%)"
+          ].toFixed(2)}%`;
+          top5El.appendChild(li);
+        });
+      })
+      .catch((err) => console.error("Error loading prediction data:", err));
+  </script>
 </html>
