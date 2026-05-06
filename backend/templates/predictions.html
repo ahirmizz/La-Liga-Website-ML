@@ -2,39 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Liga 2025-26 Predictions</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-        }
-
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        h1,
-        h2 {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
-    <h1>La Liga 2025-26 Predictions</h1>
+    <div class="predictions-page">
+      <nav class="teams-navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                <img src="{{ url_for('static', filename='icons/LaLigaTransparent.png') }}" alt="La Liga Logo" class="logo-img" height="100">
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/teams">Teams</a></li>
+                <li><a href="/predictions">Predictions</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    {% if top_champion %}
-    <h2>🏆 Predicted Champion: {{ top_champion.squad }} ({{ top_champion['combined_prob (%)'] }}%) 🏆</h2>
-    {% endif %}
+    <section class="predictions">
+        <h1>La Liga 2025-26 Predictions</h1>
+    </section>
 
     <table>
         <thead>
@@ -45,7 +39,7 @@
                 <th>Pts/MP</th>
                 <th>Goal Difference</th>
                 <th>Games Left</th>
-                <th>Winning Probability (%)</th>
+                <th>Winning Probability</th>
             </tr>
         </thead>
         <tbody>
@@ -59,9 +53,10 @@
                 <td>{{ team.games_left }}</td>
                 <td>{{ team['combined_prob (%)'] }}</td>
             </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

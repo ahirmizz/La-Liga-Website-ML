@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Fetch both JSON files
   Promise.all([
-    fetch("data/players.json").then((res) => res.json()),
-    fetch("data/player_stats.json").then((res) => res.json()),
+    fetch("/static/data/players.json").then((res) => res.json()),
+    fetch("/static/data/player_stats.json").then((res) => res.json()),
   ])
     .then(([playersData, playerStats]) => {
       // Create a map for fast stats lookup
@@ -170,14 +170,14 @@ document.addEventListener("DOMContentLoaded", () => {
           cardInner.innerHTML = `
                     <div class="front">
                         <h2 class="player-number">${player.number}</h2>
-                        <img src="${player.nation}" alt="${player.name} nationality" class="nation-flag" />
-                        <img src="${player.img}" alt="${player.name}" class="player-image" />
+                        <img src="/static/${player.nation}" alt="${player.name} nationality" class="nation-flag" />
+                        <img src="/static/${player.img}" alt="${player.name}" class="player-image" />
                         <h2 class="player-name">${player.name}</h2>
                     </div>
 
                     
                     <div class="back">
-                        <img src="${player.backImg}" alt="${player.name} back image" class="player-back-image" />
+                        <img src="/static/${player.backImg}" alt="${player.name} back image" class="player-back-image" />
                         <div class="player-stats-placement">
                             
                             ${playerStatsHTML}
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
         playerContainer.appendChild(section);
       });
 
-      // Optional: Search filtering
+      // Search filtering
       if (searchInput) {
         searchInput.addEventListener("input", () => {
           const searchTerm = searchInput.value.toLowerCase();
@@ -209,4 +209,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
     .catch((error) => console.error("Error loading data:", error));
+});
+
+
+/* ----- SIDEBAR TOGGLE BUTTON ----- */
+const sidebar = document.querySelector(".sidebar");
+const sidebarToggle = document.querySelector(".sidebar-toggle");
+
+if (sidebar && sidebarToggle) {
+  sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+
+    const icon = sidebarToggle.querySelector(".material-symbols-outlined");
+    if (sidebar.classList.contains("collapsed")) {
+      icon.textContent = "chevron_right";
+      closeAllDropdowns();
+    }
+    else {
+      icon.textContent = "chevron_left";
+    }
+  });
+}
+
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".teams-navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  }
+  else {
+    navbar.classList.remove("scrolled");
+  }
 });

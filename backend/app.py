@@ -10,7 +10,7 @@ model_path = "champion_predictor/la_liga_model_predictor.pkl"
 model = joblib.load(model_path)
 
 # Load historical La Liga data
-data_path = "la_liga_data_2010_2026.csv"
+data_path = "../champion_predictor/la_liga_data_2010_2026.csv"
 full_data = pd.read_csv(data_path)
 
 # Prepare historical weight
@@ -59,6 +59,21 @@ def predictions():
 
     return render_template('predictions.html', top_champion=top_champion, predictions=predictions_data)
 
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/teams')
+def teams():
+    return render_template('teams.html')
+
+@app.route('/real-madrid')
+def real_madrid():
+    return render_template('real-madrid-players.html')
+
+@app.route('/barcelona')
+def barcelona():
+    return render_template('barcelona-players.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

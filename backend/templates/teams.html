@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -15,10 +15,13 @@
     <div class="teams-page">
       <nav class="teams-navbar">
         <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                <img src="{{ url_for('static', filename='/icons/LaLigaTransparent.png') }}" alt="La Liga Logo" class="logo-img" height="100">
+            </a>
             <ul class="navbar-menu">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="#">Teams</a></li>
-                <li><a href="#">Predictions</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/teams">Teams</a></li>
+                <li><a href="/predictions">Predictions</a></li>
             </ul>
         </div>
     </nav>
@@ -46,7 +49,7 @@
             <div class="box">
                 <div class="card athletic-club">
                     <div class="logo">
-                        <img src="teamsLogo/Athletic Club.png" alt="Athletic Club Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Athletic Club.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Athletic<br>Club</h3>
@@ -57,7 +60,7 @@
             <div class="box">
                 <div class="card atletico-madrid">
                     <div class="logo">
-                        <img src="teamsLogo/Atlético Madrid.png" alt="Atlético Madrid Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Atlético Madrid.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Atlético<br>Madrid</h3>
@@ -68,7 +71,7 @@
             <div class="box">
                 <div class="card osasuna">
                     <div class="logo">
-                        <img src="teamsLogo/CA Osasuna.png" alt="CA Osasuna Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/CA Osasuna.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>CA<br>Osasuna</h3>
@@ -79,7 +82,7 @@
             <div class="box">
                 <div class="card celta">
                     <div class="logo">
-                        <img src="teamsLogo/RC Celta de Vigo.png" alt="RC Celta de Vigo Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/RC Celta de Vigo.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>RC Celta<br>de Vigo</h3>
@@ -90,7 +93,7 @@
             <div class="box">
                 <div class="card deportivo-alaves">
                     <div class="logo">
-                        <img src="teamsLogo/Deportivo Alavés.png" alt="Deportivo Alavés Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Deportivo Alavés.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Deportivo<br>Alavés</h3>
@@ -101,7 +104,7 @@
             <div class="box">
                 <div class="card elche">
                     <div class="logo">
-                        <img src="teamsLogo/Elche CF.png" alt="Elche CF Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Elche CF.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Elche<br>CF</h3>
@@ -110,11 +113,11 @@
             </div>
 
 
-            <a href="barcelona-players.html">
+            <a href="/barcelona">
                 <div class="box">
                     <div class="card barcelona">
                         <div class="logo">
-                            <img src="teamsLogo/FC Barcelona.png" alt="Barcelona Logo" />
+                            <img src="{{ url_for('static', filename='teamsLogo/FC Barcelona.png') }}" />
                         </div>
                         <div class="team-name">
                             <h3>FC<br>Barcelona</h3>
@@ -126,7 +129,7 @@
             <div class="box">
                 <div class="card getafe">
                     <div class="logo">
-                        <img src="teamsLogo/Getafe CF.png" alt="Getafe CF Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Getafe CF.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Getafe<br>CF</h3>
@@ -137,7 +140,7 @@
             <div class="box">
                 <div class="card girona">
                     <div class="logo">
-                        <img src="teamsLogo/Girona FC.png" alt="Girona FC Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Girona FC.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Girona<br>FC</h3>
@@ -149,7 +152,7 @@
             <div class="box">
                 <div class="card levante">
                     <div class="logo">
-                        <img src="teamsLogo/Levante UD.png" alt="Levante UD Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Levante UD.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Levante<br>UD</h3>
@@ -161,7 +164,7 @@
             <div class="box">
                 <div class="card rayo-vallecano">
                     <div class="logo">
-                        <img src="teamsLogo/Rayo Vallecano.png" alt="Rayo Vallecano Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Rayo Vallecano.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Rayo<br>Vallecano</h3>
@@ -172,7 +175,7 @@
             <div class="box">
                 <div class="card rcd-espanyol">
                     <div class="logo">
-                        <img src="teamsLogo/RCD Espanyol.png" alt="RCD Espanyol Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/RCD Espanyol.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>RCD<br>Espanyol</h3>
@@ -184,7 +187,7 @@
             <div class="box">
                 <div class="card rcd-mallorca">
                     <div class="logo">
-                        <img src="teamsLogo/RCD Mallorca.png" alt="RCD Mallorca Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/RCD Mallorca.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>RCD<br>Mallorca</h3>
@@ -196,7 +199,7 @@
             <div class="box">
                 <div class="card real-betis">
                     <div class="logo">
-                        <img src="teamsLogo/Real Betis.png" alt="Real Betis Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Real Betis.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Real<br>Betis</h3>
@@ -205,11 +208,11 @@
             </div>
 
 
-            <a href="real-madrid-players.html">
+            <a href="/real-madrid">
             <div class="box">
                 <div class="card real-madrid">
                     <div class="logo">
-                        <img src="teamsLogo/Real Madrid.png" alt="Real Madrid Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Real Madrid.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Real<br>Madrid</h3>
@@ -222,7 +225,7 @@
             <div class="box">
                 <div class="card real-oviedo">
                     <div class="logo">
-                        <img src="teamsLogo/Real Oviedo.png" alt="Real Oviedo Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Real Oviedo.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Real<br>Oviedo</h3>
@@ -234,7 +237,7 @@
             <div class="box">
                 <div class="card real-sociedad">
                     <div class="logo">
-                        <img src="teamsLogo/Real Sociedad.png" alt="Real Sociedad Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Real Sociedad.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Real<br>Sociedad</h3>
@@ -246,7 +249,7 @@
             <div class="box">
                 <div class="card sevilla">
                     <div class="logo">
-                        <img src="teamsLogo/Sevilla FC.png" alt="Sevilla FC Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Sevilla FC.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Sevilla<br>FC</h3>
@@ -259,7 +262,7 @@
             <div class="box">
                 <div class="card valencia">
                     <div class="logo">
-                        <img src="teamsLogo/Valencia CF.png" alt="Valencia CF Logo" />
+                        <img src="{{ url_for('static', filename='teamsLogo/Valencia CF.png') }}" />
                     </div>
                     <div class="team-name">
                         <h3>Valencia<br>CF</h3>
@@ -272,7 +275,9 @@
     </section>
 </div>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
 </body>
 
 </html>

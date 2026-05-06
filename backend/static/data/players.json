@@ -21,7 +21,7 @@
           "backImg": "RMA_images/GulerBack.jpg"
         },
         {
-          "name": "Jude Bellingham",
+          "name": "Bellingham",
           "position": "Midfielder",
           "number": 5,
           "nation": "nations/England.png",
@@ -206,7 +206,8 @@
           "position": "Goalkeeper",
           "number": 25,
           "nation": "nations/Poland.png",
-          "img": "Barca_images/Szczesny.webp"
+          "img": "Barca_images/Szczesny.webp",
+          "backImg": "Barca_images/SzczesnyBack.jpg"
         },
         {
           "name": "Cubarsí",
@@ -261,14 +262,16 @@
           "position": "Defender",
           "number": 24,
           "nation": "nations/Spain.png",
-          "img": "Barca_images/Garcia.webp"
+          "img": "Barca_images/Garcia.webp",
+          "backImg": "Barca_images/GarciaBack.jpg"
         },
         {
           "name": "Gavi",
           "position": "Midfielder",
           "number": 6,
           "nation": "nations/Spain.png",
-          "img": "Barca_images/Gavi.webp"
+          "img": "Barca_images/Gavi.webp",
+          "backImg": "Barca_images/GaviBack.jpeg"
         },
         {
           "name": "Pedri",
@@ -291,7 +294,8 @@
           "position": "Midfielder",
           "number": 16,
           "nation": "nations/Spain.png",
-          "img": "Barca_images/Lopez.webp"
+          "img": "Barca_images/Lopez.webp",
+          "backImg": "Barca_images/LopezBack.jpg"
         },
         {
           "name": "Casadó",
@@ -314,14 +318,16 @@
           "position": "Midfielder",
           "number": 21,
           "nation": "nations/Netherlands.png",
-          "img": "Barca_images/DeJong.webp"
+          "img": "Barca_images/DeJong.webp",
+          "backImg": "Barca_images/DeJongBack.jpeg"
         },
         {
           "name": "Ferran Torres",
           "position": "Forward",
           "number": 7,
           "nation": "nations/Spain.png",
-          "img": "Barca_images/FerranTorres.webp"
+          "img": "Barca_images/FerranTorres.webp",
+          "backImg": "Barca_images/FerranTorresBack.jpg"
         },
         {
           "name": "Lewandowski",
@@ -336,7 +342,8 @@
           "position": "Forward",
           "number": 10,
           "nation": "nations/Bissau.png",
-          "img": "Barca_images/AnsuFati.webp"
+          "img": "Barca_images/AnsuFati.webp",
+          "backImg": "Barca_images/AnsuFatiBack.jpg"
         },
         {
           "name": "Raphinha",
@@ -359,7 +366,8 @@
           "position": "Forward",
           "number": 19,
           "nation": "nations/Spain.png",
-          "img": "Barca_images/Yamal.webp"
+          "img": "Barca_images/Yamal.webp",
+          "backImg": "Barca_images/YamalBack.jpg"
         }
       ]
     }

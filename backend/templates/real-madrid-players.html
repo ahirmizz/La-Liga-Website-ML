@@ -13,30 +13,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
 <body>
             <nav class="teams-navbar">
                 <div class="navbar-container">
-                    <a href="home.html" class="navbar-logo">LaLiga</a>
+                    <a href="/" class="navbar-logo">
+                        <img src="{{ url_for('static', filename='/icons/LaLigaTransparent.png') }}" alt="La Liga Logo" class="logo-img" height="100">
+                    </a>
                     <button class="navbar-toggle">
                         <span class="bar"></span>
                         <span class="bar"></span>
                         <span class="bar"></span>
                     </button>
                     <ul class="navbar-menu">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="teams.html">Teams</a></li>
-                        <li><a href="#">Nations</a></li>
-                        <li><a href="#">Position</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/teams">Teams</a></li>
+                        <li><a href="/predictions">Predictions</a></li>
                     </ul>
                 </div>
             </nav>
 
     <div class="Real-Madrid-Header">
-        <img src="teamsLogo/Real Madrid.png" alt="Real Madrid CF Logo" class="team-logo" width="150px" height="200px">
-        <h1>Real Madrid C.F.</h1>
+        <img src="{{ url_for('static', filename='teamsLogo/Real Madrid.png') }}" alt="Real Madrid CF Logo" class="team-logo" width="150px" height="200px">
+        
     </div>
 
     <div class="Real-Madrid-Page">
@@ -47,7 +48,7 @@
     </div>
     
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
