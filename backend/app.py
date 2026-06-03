@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template
 import pandas as pd
 import joblib
@@ -5,12 +6,13 @@ from sklearn.ensemble import RandomForestClassifier
 
 app = Flask(__name__)
 
-# Load trained model
-model_path = "champion_predictor/la_liga_model_predictor.pkl"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model_path = os.path.join(BASE_DIR, "..", "champion_predictor", "la_liga_model_predictor.pkl")
 model = joblib.load(model_path)
 
 # Load historical La Liga data
-data_path = "../champion_predictor/la_liga_data_2010_2026.csv"
+data_path = os.path.join(BASE_DIR, "..", "champion_predictor", "la_liga_data_2010_2026.csv")
 full_data = pd.read_csv(data_path)
 
 # Prepare historical weight
