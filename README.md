@@ -1,4 +1,4 @@
-# ⚽ La Liga Zone: Predictive Analytics Platform
+# ⚽ La Liga 25-26 Champions: Predictive Analytics Platform
 
 A full-stack web application and predictive analytics platform for the La Liga 2025-26 season. The project combines a custom hybrid machine learning pipeline with a responsive web dashboard to showcase real-time squad statistics, automated player card interfaces, and AI-driven championship projections for the 25-26 La Liga season.
 
